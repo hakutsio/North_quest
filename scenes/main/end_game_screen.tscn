@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://vu14yp37bg17"]
+
+[ext_resource type="FontFile" uid="uid://d00h4ctsh5ohj" path="res://assets/fonts/PirataOne-Regular.ttf" id="1_cwud8"]
+[ext_resource type="Script" uid="uid://y32r6u5d3wxm" path="res://scenes/main/end_game_screen.gd" id="1_ylhj1"]
+[ext_resource type="Texture2D" uid="uid://bv7061svcrrw7" path="res://assets/sprites/imagemGameOver.png" id="2_7eta3"]
+[ext_resource type="Texture2D" uid="uid://dd5chn7mty8ao" path="res://assets/ui/buttons/Button_Blue_3Slides.png" id="2_o0iis"]
+[ext_resource type="Texture2D" uid="uid://t6ugsh3rd7ag" path="res://assets/ui/buttons/Button_Blue_3Slides_Pressed.png" id="3_ylhj1"]
+[ext_resource type="Texture2D" uid="uid://crpe6wlm1i2bo" path="res://assets/ui/buttons/Button_Hover_3Slides.png" id="4_7eta3"]
+
+[node name="EndGameScreen" type="Control" unique_id=1627987398]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ylhj1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=276558842]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.22352941)
+
+[node name="VB" type="VBoxContainer" parent="." unique_id=31728329]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 548.5713
+offset_bottom = 308.5714
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="VB" unique_id=1324450087]
+position = Vector2(914.2857, 514.2858)
+scale = Vector2(0.757486, 0.5952382)
+texture = ExtResource("2_7eta3")
+
+[node name="Result" type="Label" parent="VB" unique_id=254361751]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_cwud8")
+theme_override_font_sizes/font_size = 164
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="VB" unique_id=2016265351]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Repetir" type="TextureButton" parent="VB/Buttons" unique_id=476917676]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_o0iis")
+texture_pressed = ExtResource("3_ylhj1")
+texture_hover = ExtResource("4_7eta3")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VB/Buttons/Repetir" unique_id=1942267540]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_cwud8")
+theme_override_font_sizes/font_size = 60
+text = "Repetir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="TextureButton" parent="VB/Buttons" unique_id=794105211]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_o0iis")
+texture_pressed = ExtResource("3_ylhj1")
+texture_hover = ExtResource("4_7eta3")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VB/Buttons/MainMenu" unique_id=649742655]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_cwud8")
+theme_override_font_sizes/font_size = 60
+text = "Menu Principal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VB/Buttons/Repetir" to="." method="_on_repetir_pressed"]
+[connection signal="pressed" from="VB/Buttons/MainMenu" to="." method="_on_main_menu_pressed"]

@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://cuyvv7kr6fj3r"]
+
+[ext_resource type="Texture2D" uid="uid://xxt1wbwh3r6" path="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/portal-ancient-ruins-activated-loop.png" id="1_ju5mt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_348lo"]
+atlas = ExtResource("1_ju5mt")
+region = Rect2(0, 0, 288, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c15pj"]
+atlas = ExtResource("1_ju5mt")
+region = Rect2(288, 0, 288, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vqgp"]
+atlas = ExtResource("1_ju5mt")
+region = Rect2(576, 0, 288, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1meby"]
+atlas = ExtResource("1_ju5mt")
+region = Rect2(864, 0, 288, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gqm4"]
+atlas = ExtResource("1_ju5mt")
+region = Rect2(1152, 0, 288, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujdny"]
+atlas = ExtResource("1_ju5mt")
+region = Rect2(1440, 0, 288, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mm1a7"]
+atlas = ExtResource("1_ju5mt")
+region = Rect2(1728, 0, 288, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byblq"]
+atlas = ExtResource("1_ju5mt")
+region = Rect2(0, 192, 288, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_byorm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_348lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c15pj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vqgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1meby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gqm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujdny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mm1a7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byblq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcwl6"]
+size = Vector2(38.5, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70v0r"]
+size = Vector2(82.25, 50.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwqq3"]
+size = Vector2(96.625, 50.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wc1bm"]
+radius = 76.93666
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1447522997]
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1428731640]
+sprite_frames = SubResource("SpriteFrames_byorm")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1091155857]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=776355338]
+position = Vector2(2, 43.5)
+shape = SubResource("RectangleShape2D_gcwl6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1792165040]
+position = Vector2(-60, 57)
+shape = SubResource("RectangleShape2D_70v0r")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1479514634]
+position = Vector2(71.6875, 57.5)
+shape = SubResource("RectangleShape2D_mwqq3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=73339021]
+position = Vector2(1.5, -20)
+shape = SubResource("CircleShape2D_wc1bm")

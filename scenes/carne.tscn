@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://blvubk53v3srd"]
+
+[ext_resource type="Script" uid="uid://bnopfdm0mjkie" path="res://carne.gd" id="1_g2jc5"]
+[ext_resource type="Texture2D" uid="uid://nwnd4db8gaii" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Meat/Meat Resource/Meat Resource.png" id="2_8md8p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_465xe"]
+radius = 20.024984
+
+[node name="carne" type="Node2D" unique_id=1095843907]
+script = ExtResource("1_g2jc5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1588318759]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=114837755]
+texture = ExtResource("2_8md8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=688222968]
+shape = SubResource("CircleShape2D_465xe")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

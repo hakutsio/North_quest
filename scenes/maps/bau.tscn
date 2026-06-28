@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dt20kc6u0n24d"]
+
+[ext_resource type="Script" uid="uid://b3it5jbo2t8ft" path="res://scenes/maps/bau.gd" id="1_flx6r"]
+[ext_resource type="Texture2D" uid="uid://cow2xmq6mdhr" path="res://Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/1.png" id="2_iat8v"]
+[ext_resource type="Texture2D" uid="uid://dm7uafthvk4eb" path="res://Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/2.png" id="3_w41sf"]
+[ext_resource type="Texture2D" uid="uid://doe48hp6kxek2" path="res://Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/3.png" id="4_ctdev"]
+[ext_resource type="Texture2D" uid="uid://c1dxyaggwvus1" path="res://Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/4.png" id="5_1xmrn"]
+[ext_resource type="Texture2D" uid="uid://bdnggmxti6mdi" path="res://Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/5.png" id="6_666ja"]
+[ext_resource type="Texture2D" uid="uid://xw8srd86ac7t" path="res://Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/6.png" id="7_8edtb"]
+[ext_resource type="Texture2D" uid="uid://b58aqr44mtonw" path="res://Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/7.png" id="8_f3grk"]
+[ext_resource type="Texture2D" uid="uid://cucbnv3w0q56l" path="res://Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/8.png" id="9_h6ly1"]
+[ext_resource type="Texture2D" uid="uid://d04osyh46u6y2" path="res://Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Chest/Idle/1.png" id="10_wqvia"]
+[ext_resource type="Texture2D" uid="uid://do1fb8nt58b31" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/TinyRoundBlueButton.png" id="11_vnsp0"]
+[ext_resource type="FontFile" uid="uid://d00h4ctsh5ohj" path="res://assets/fonts/PirataOne-Regular.ttf" id="12_uokcs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vqlm4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iat8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w41sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ctdev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1xmrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_666ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8edtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_f3grk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h6ly1")
+}],
+"loop": false,
+"name": &"abrir",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_wqvia")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d11ww"]
+size = Vector2(26, 18)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yk3i7"]
+radius = 22.022715
+
+[sub_resource type="LabelSettings" id="LabelSettings_v84el"]
+font = ExtResource("12_uokcs")
+font_size = 46
+
+[node name="bau" type="StaticBody2D" unique_id=226146913]
+scale = Vector2(2, 2)
+script = ExtResource("1_flx6r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=493045062]
+sprite_frames = SubResource("SpriteFrames_vqlm4")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=526117908]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_d11ww")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=101443072]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=568924780]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_yk3i7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1194110070]
+visible = false
+position = Vector2(1, -29)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("11_vnsp0")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=952549154]
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = 30.0
+text = "F"
+label_settings = SubResource("LabelSettings_v84el")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

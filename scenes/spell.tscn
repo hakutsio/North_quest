@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cvwawqnmqkkj"]
+
+[ext_resource type="Texture2D" uid="uid://c13k30wrmjxnq" path="res://Tiny Swords (Free Pack)/Tiny Swords (Enemy Pack) (3)/Tiny Swords (Enemy Pack)/Enemy Pack/Enemies/Goblin Raiders/Hex Shaman/Hex Shaman_Explosion.png" id="1_om5k2"]
+[ext_resource type="Script" uid="uid://cikgibsh2ujly" path="res://spell.gd" id="2_ol3gn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nstc"]
+atlas = ExtResource("1_om5k2")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkwhk"]
+atlas = ExtResource("1_om5k2")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kvbf"]
+atlas = ExtResource("1_om5k2")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uiofm"]
+atlas = ExtResource("1_om5k2")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc6u6"]
+atlas = ExtResource("1_om5k2")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tym5"]
+atlas = ExtResource("1_om5k2")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdbgk"]
+atlas = ExtResource("1_om5k2")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bo3g"]
+atlas = ExtResource("1_om5k2")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_802a8"]
+atlas = ExtResource("1_om5k2")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yl01e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nstc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkwhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kvbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uiofm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dc6u6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tym5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdbgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bo3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_802a8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="spell" type="AnimatedSprite2D" unique_id=635253904]
+sprite_frames = SubResource("SpriteFrames_yl01e")
+autoplay = "default"
+script = ExtResource("2_ol3gn")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

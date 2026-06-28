@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://c2jawyhx01x2g"]
+
+[ext_resource type="Texture2D" uid="uid://dd5chn7mty8ao" path="res://assets/ui/buttons/Button_Blue_3Slides.png" id="1_1g8jr"]
+[ext_resource type="Script" uid="uid://o53tmyq54wy8" path="res://scenes/ui/main_menu.gd" id="1_x2yvf"]
+[ext_resource type="Texture2D" uid="uid://t6ugsh3rd7ag" path="res://assets/ui/buttons/Button_Blue_3Slides_Pressed.png" id="2_m1kxf"]
+[ext_resource type="AudioStream" uid="uid://dxj84q4oa61na" path="res://assets/audio/music/musica2.ogg" id="2_wb0q5"]
+[ext_resource type="Texture2D" uid="uid://crpe6wlm1i2bo" path="res://assets/ui/buttons/Button_Hover_3Slides.png" id="3_x2yvf"]
+[ext_resource type="FontFile" uid="uid://d00h4ctsh5ohj" path="res://assets/fonts/PirataOne-Regular.ttf" id="4_m1kxf"]
+[ext_resource type="Script" uid="uid://oceql178qyos" path="res://scenes/ui/video_stream_player.gd" id="4_wb0q5"]
+[ext_resource type="Texture2D" uid="uid://cehadrwb5hjei" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/escudoTitulo.png" id="37_bvtfn"]
+
+[sub_resource type="GDScript" id="GDScript_btxxm"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_wb0q5"]
+resource_local_to_scene = true
+resource_name = "backgroundMenu"
+file = "res://assets/backgroundMenu.ogv"
+script = SubResource("GDScript_btxxm")
+
+[node name="MainMenu" type="Control" unique_id=1369121362]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x2yvf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=102121404]
+stream = ExtResource("2_wb0q5")
+
+[node name="backgroundMenu" type="VideoStreamPlayer" parent="." unique_id=632626]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 1280.0
+offset_bottom = 724.0
+stream = SubResource("VideoStreamTheora_wb0q5")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
+script = ExtResource("4_wb0q5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1557299070]
+position = Vector2(1056.5, 527.9)
+scale = Vector2(0.23088846, 0.22673616)
+texture = ExtResource("37_bvtfn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1796069229]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 850.0
+scale = Vector2(0.6, 0.6)
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Novo Jogo" type="TextureButton" parent="VBoxContainer" unique_id=1790102130]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_1g8jr")
+texture_pressed = ExtResource("2_m1kxf")
+texture_hover = ExtResource("3_x2yvf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/Novo Jogo" unique_id=482540498]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_m1kxf")
+theme_override_font_sizes/font_size = 60
+text = "Novo Jogo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sobre" type="TextureButton" parent="VBoxContainer" unique_id=2029966854]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_1g8jr")
+texture_pressed = ExtResource("2_m1kxf")
+texture_hover = ExtResource("3_x2yvf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/Sobre" unique_id=12961686]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_m1kxf")
+theme_override_font_sizes/font_size = 52
+text = "Sobre"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=106469327]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Sair" type="TextureButton" parent="VBoxContainer" unique_id=183211664]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_1g8jr")
+texture_pressed = ExtResource("2_m1kxf")
+texture_hover = ExtResource("3_x2yvf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/Sair" unique_id=1252827009]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_m1kxf")
+theme_override_font_sizes/font_size = 60
+text = "Sair"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Novo Jogo" to="." method="_on_novo_jogo_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sobre" to="." method="_on_sobre_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sair" to="." method="_on_sair_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dr684vshqbftd"]
+
+[ext_resource type="Script" uid="uid://dxolgh2v20pb0" path="res://scenes/main/game_scene.gd" id="1_rfwcf"]
+[ext_resource type="PackedScene" uid="uid://vu14yp37bg17" path="res://scenes/main/end_game_screen.tscn" id="2_5odut"]
+
+[node name="GameScene" type="Node2D" unique_id=969639682]
+script = ExtResource("1_rfwcf")
+end_game_screen_packed = ExtResource("2_5odut")

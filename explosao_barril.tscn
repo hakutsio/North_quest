@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://43r0aa41yatw"]
+
+[ext_resource type="Texture2D" uid="uid://c0jbqd7xa3raa" path="res://Tiny Swords (Free Pack)/Particle FX/Explosion_02.png" id="1_ljk58"]
+[ext_resource type="Script" uid="uid://bnvq6kb1ix0pf" path="res://explosao_barril.gd" id="2_p4xyg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trf4w"]
+atlas = ExtResource("1_ljk58")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1c36"]
+atlas = ExtResource("1_ljk58")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xuts5"]
+atlas = ExtResource("1_ljk58")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybqtj"]
+atlas = ExtResource("1_ljk58")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofc61"]
+atlas = ExtResource("1_ljk58")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6epw6"]
+atlas = ExtResource("1_ljk58")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6sbe"]
+atlas = ExtResource("1_ljk58")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ov1t"]
+atlas = ExtResource("1_ljk58")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msgvw"]
+atlas = ExtResource("1_ljk58")
+region = Rect2(1536, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkhp3"]
+atlas = ExtResource("1_ljk58")
+region = Rect2(1728, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m2hv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trf4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1c36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xuts5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybqtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofc61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6epw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6sbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ov1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msgvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkhp3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="explosaoBarril" type="AnimatedSprite2D" unique_id=794558687]
+sprite_frames = SubResource("SpriteFrames_m2hv5")
+autoplay = "default"
+frame = 9
+frame_progress = 1.0
+script = ExtResource("2_p4xyg")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

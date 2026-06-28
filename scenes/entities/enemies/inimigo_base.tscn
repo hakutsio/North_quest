@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bkyuh2aw464n1"]
+
+[ext_resource type="Script" uid="uid://b0r1ydi5thh8v" path="res://scenes/entities/enemies/inimigo_base.gd" id="1_ipfx2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1urg7"]
+radius = 22.022715
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l23vk"]
+radius = 23.0
+height = 68.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_soblo"]
+size = Vector2(8, 43.5)
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1542823841]
+script = ExtResource("1_ipfx2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1224044581]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=830379054]
+path_postprocessing = 1
+avoidance_enabled = true
+radius = 48.0
+neighbor_distance = 128.0
+max_speed = 128.0
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0.97566444, 4.5724214e-06, 1.540184e-06, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2025509994]
+shape = SubResource("CircleShape2D_1urg7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=798869041]
+
+[node name="hurtBox" type="Area2D" parent="." unique_id=1160843126]
+collision_layer = 16
+collision_mask = 0
+input_pickable = false
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox" unique_id=1532269988]
+position = Vector2(-1, -32)
+shape = SubResource("CapsuleShape2D_l23vk")
+
+[node name="hitBox" type="Area2D" parent="." unique_id=1005801795]
+position = Vector2(-58, 0)
+rotation = -2.0071287
+collision_layer = 0
+collision_mask = 32
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitBox" unique_id=570683609]
+position = Vector2(0, -21)
+shape = SubResource("RectangleShape2D_soblo")
+
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]

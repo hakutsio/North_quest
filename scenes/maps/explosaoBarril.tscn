@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://qoobe37ihyhy"]
+
+[ext_resource type="Texture2D" uid="uid://c0jbqd7xa3raa" path="res://Tiny Swords (Free Pack)/Particle FX/Explosion_02.png" id="1_23haq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1duf"]
+atlas = ExtResource("1_23haq")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqpcj"]
+atlas = ExtResource("1_23haq")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfsj2"]
+atlas = ExtResource("1_23haq")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5jnr"]
+atlas = ExtResource("1_23haq")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pru5m"]
+atlas = ExtResource("1_23haq")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exatm"]
+atlas = ExtResource("1_23haq")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uhiy"]
+atlas = ExtResource("1_23haq")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7w5ec"]
+atlas = ExtResource("1_23haq")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e1cw"]
+atlas = ExtResource("1_23haq")
+region = Rect2(1536, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xp8xf"]
+atlas = ExtResource("1_23haq")
+region = Rect2(1728, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jm87h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1duf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqpcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfsj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5jnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pru5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exatm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uhiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7w5ec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e1cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp8xf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="explosaoB" type="AnimatedSprite2D" unique_id=697989231]
+sprite_frames = SubResource("SpriteFrames_jm87h")
+frame_progress = 0.5338524

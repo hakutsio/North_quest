@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://c5kuywt74g6cc"]
+
+[ext_resource type="Script" uid="uid://b8e0m5lbfiayu" path="res://scenes/bomba.gd" id="1_p7cim"]
+[ext_resource type="Texture2D" uid="uid://dna2wwltpbdim" path="res://Tiny Swords (Free Pack)/Tiny Swords (Enemy Pack) (3)/Tiny Swords (Enemy Pack)/Enemy Pack/Enemies/Goblin Raiders/Hex Shaman/Hex Shaman_Projectile.png" id="2_p7cim"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8h73"]
+atlas = ExtResource("2_p7cim")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfrxs"]
+atlas = ExtResource("2_p7cim")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxrgq"]
+atlas = ExtResource("2_p7cim")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4dbja"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8h73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfrxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxrgq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p7cim"]
+radius = 17.0
+
+[node name="Area2D" type="Area2D" unique_id=1812766544]
+script = ExtResource("1_p7cim")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=2084195375]
+sprite_frames = SubResource("SpriteFrames_4dbja")
+autoplay = "default"
+frame_progress = 0.100583754
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=177464439]
+shape = SubResource("CircleShape2D_p7cim")
+
+[node name="Timer" type="Timer" parent="." unique_id=191444839]
+wait_time = 2.5
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
