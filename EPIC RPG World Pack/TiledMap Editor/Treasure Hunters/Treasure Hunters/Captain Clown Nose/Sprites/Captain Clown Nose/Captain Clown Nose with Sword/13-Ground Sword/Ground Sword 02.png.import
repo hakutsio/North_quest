@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf11212enqybc"
-path="res://.godot/imported/Ground Sword 02.png-442441169658873970c5432f6bb8cbeb.ctex"
+path="res://.godot/imported/Ground Sword 02.png-5b039ac8d8da50c4c016bb0e8c83a21e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/13-Ground Sword/Ground Sword 02.png"
-dest_files=["res://.godot/imported/Ground Sword 02.png-442441169658873970c5432f6bb8cbeb.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/13-Ground Sword/Ground Sword 02.png"
+dest_files=["res://.godot/imported/Ground Sword 02.png-5b039ac8d8da50c4c016bb0e8c83a21e.ctex"]
 
 [params]
 

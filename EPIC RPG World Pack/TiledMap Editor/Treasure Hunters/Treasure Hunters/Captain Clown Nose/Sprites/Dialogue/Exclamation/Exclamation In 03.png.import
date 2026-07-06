@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ptnpmhxddb1s"
-path="res://.godot/imported/Exclamation In 03.png-8d9cce6a67abd56ba74cde1eb3356e0a.ctex"
+path="res://.godot/imported/Exclamation In 03.png-38d1aba4ec45cf5a34ecf8073fe57062.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Dialogue/Exclamation/Exclamation In 03.png"
-dest_files=["res://.godot/imported/Exclamation In 03.png-8d9cce6a67abd56ba74cde1eb3356e0a.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Dialogue/Exclamation/Exclamation In 03.png"
+dest_files=["res://.godot/imported/Exclamation In 03.png-38d1aba4ec45cf5a34ecf8073fe57062.ctex"]
 
 [params]
 

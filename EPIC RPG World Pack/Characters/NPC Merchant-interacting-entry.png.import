@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhx6fnanio382"
-path="res://.godot/imported/NPC Merchant-interacting-entry.png-f15c58db7c23e3e5711085c6bcfc5cd8.ctex"
+path="res://.godot/imported/NPC Merchant-interacting-entry.png-45ea4972f8815253998caf39d0917a1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/Characters/NPC Merchant-interacting-entry.png"
-dest_files=["res://.godot/imported/NPC Merchant-interacting-entry.png-f15c58db7c23e3e5711085c6bcfc5cd8.ctex"]
+source_file="res://EPIC RPG World Pack/Characters/NPC Merchant-interacting-entry.png"
+dest_files=["res://.godot/imported/NPC Merchant-interacting-entry.png-45ea4972f8815253998caf39d0917a1e.ctex"]
 
 [params]
 

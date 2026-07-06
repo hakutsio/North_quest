@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duhmceh5hfg5a"
-path="res://.godot/imported/Attack Effect 02.png-9229bd2c35d26f0e2c8e2ed08bc5ea8e.ctex"
+path="res://.godot/imported/Attack Effect 02.png-ebaf053069f81df5bf5256f8ac4794ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/11-Attack Effect/Attack Effect 02.png"
-dest_files=["res://.godot/imported/Attack Effect 02.png-9229bd2c35d26f0e2c8e2ed08bc5ea8e.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/11-Attack Effect/Attack Effect 02.png"
+dest_files=["res://.godot/imported/Attack Effect 02.png-ebaf053069f81df5bf5256f8ac4794ab.ctex"]
 
 [params]
 

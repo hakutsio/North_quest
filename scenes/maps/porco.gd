@@ -6,6 +6,7 @@ var indiceDirecao:int = 0
 var vida:int = 100
 
 func _ready() -> void:
+	await get_tree().create_timer(randf_range(0.4, 8)).timeout
 	mudarDirecao()
 
 func mudarDirecao() -> void:
@@ -19,7 +20,7 @@ func mudarDirecao() -> void:
 	play("run")
 	await tween.finished
 	play("idle")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(randf_range(0.4, 8)).timeout
 	indiceDirecao += 1 
 	
 	if indiceDirecao >= lista_direcoes.size():

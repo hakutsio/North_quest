@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2gihrccmnno1"
-path="res://.godot/imported/Idle 05.png-e26ac75505602e4d2f27ce3c9bfd1508.ctex"
+path="res://.godot/imported/Idle 05.png-95d751b2bec86084f41091355f2639d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 05.png"
-dest_files=["res://.godot/imported/Idle 05.png-e26ac75505602e4d2f27ce3c9bfd1508.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 05.png"
+dest_files=["res://.godot/imported/Idle 05.png-95d751b2bec86084f41091355f2639d1.ctex"]
 
 [params]
 

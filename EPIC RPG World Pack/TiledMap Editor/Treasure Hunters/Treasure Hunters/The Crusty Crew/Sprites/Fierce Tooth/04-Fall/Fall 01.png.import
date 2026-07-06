@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n0b8lddfmndv"
-path="res://.godot/imported/Fall 01.png-abc5b3535e8b42b92d61817f43261ed4.ctex"
+path="res://.godot/imported/Fall 01.png-ce9ec8c3fd9a9d876e385a57df42226a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/04-Fall/Fall 01.png"
-dest_files=["res://.godot/imported/Fall 01.png-abc5b3535e8b42b92d61817f43261ed4.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/04-Fall/Fall 01.png"
+dest_files=["res://.godot/imported/Fall 01.png-ce9ec8c3fd9a9d876e385a57df42226a.ctex"]
 
 [params]
 

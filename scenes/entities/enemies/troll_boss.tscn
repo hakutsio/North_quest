@@ -3,10 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://bkyuh2aw464n1" path="res://scenes/entities/enemies/inimigo_base.tscn" id="1_pkkug"]
 [ext_resource type="Texture2D" uid="uid://bk6fy36heacoq" path="res://Tiny Swords (Free Pack)/Tiny Swords (Enemy Pack) (3)/Tiny Swords (Enemy Pack)/Enemy Pack/Enemies/Troll/Troll_Idle.png" id="2_40gel"]
 [ext_resource type="Texture2D" uid="uid://bwrkc57ahfa4w" path="res://Tiny Swords (Free Pack)/Tiny Swords (Enemy Pack) (3)/Tiny Swords (Enemy Pack)/Enemy Pack/Enemies/Troll/Troll_Attack.png" id="3_77gb4"]
+[ext_resource type="Texture2D" uid="uid://dwfr1ssj0rtc7" path="res://Tiny Swords (Free Pack)/Tiny Swords (Enemy Pack) (3)/Tiny Swords (Enemy Pack)/Enemy Pack/Enemies/Troll/Troll_Dead.png" id="4_40gel"]
 [ext_resource type="Texture2D" uid="uid://dneiioiqwravi" path="res://Tiny Swords (Free Pack)/Tiny Swords (Enemy Pack) (3)/Tiny Swords (Enemy Pack)/Enemy Pack/Enemies/Troll/Troll_Walk.png" id="4_hi57c"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pkkug"]
+radius = 32.140316
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_40gel"]
+radius = 71.25307
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_wlyct"]
-radius = 22.847319
+radius = 97.452545
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_t6g2m"]
 
@@ -83,6 +90,96 @@ tracks/2/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hitBox/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(14.474005, 120.39727)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hitBox:monitoring")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_pkkug"]
+resource_name = "attack_left"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_77gb4")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hitBox/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(48.16134, 43.422188)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hitBox:monitoring")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
 
 [sub_resource type="Animation" id="Animation_urskk"]
 resource_name = "attack_right"
@@ -125,6 +222,30 @@ tracks/2/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hitBox/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(14.474005, 120.39727)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hitBox:monitoring")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
 
 [sub_resource type="Animation" id="Animation_xtmrg"]
 resource_name = "idle"
@@ -166,6 +287,46 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_77gb4"]
+resource_name = "morte"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_40gel")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.90000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 
 [sub_resource type="Animation" id="Animation_r4xeb"]
@@ -212,19 +373,32 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x2x4q"]
 _data = {
 &"RESET": SubResource("Animation_xog7y"),
+&"attack_left": SubResource("Animation_pkkug"),
 &"attack_right": SubResource("Animation_urskk"),
 &"idle": SubResource("Animation_xtmrg"),
+&"morte": SubResource("Animation_77gb4"),
 &"run": SubResource("Animation_r4xeb")
 }
 
 [node name="trollBoss" unique_id=1542823841 instance=ExtResource("1_pkkug")]
+morteTroll = true
 
 [node name="Sprite2D" parent="." index="0" unique_id=1224044581]
+position = Vector2(1, -80)
 texture = ExtResource("2_40gel")
+flip_h = true
 hframes = 12
 
+[node name="CollisionShape2D" parent="." index="2" unique_id=2025509994]
+position = Vector2(1, -23)
+shape = SubResource("CircleShape2D_pkkug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox" parent_id_path=PackedInt32Array(1160843126) index="0" unique_id=562579836]
+position = Vector2(6, -58)
+shape = SubResource("CircleShape2D_40gel")
+
 [node name="CollisionShape2D" parent="hitBox" parent_id_path=PackedInt32Array(1005801795) index="0" unique_id=570683609]
-position = Vector2(0, 0)
+position = Vector2(14.474005, 120.39727)
 shape = SubResource("CircleShape2D_wlyct")
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="6" unique_id=129121469]
@@ -233,3 +407,6 @@ tree_root = SubResource("AnimationNodeStateMachine_ljt0r")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7" unique_id=38008634]
 libraries/ = SubResource("AnimationLibrary_x2x4q")
+
+[connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

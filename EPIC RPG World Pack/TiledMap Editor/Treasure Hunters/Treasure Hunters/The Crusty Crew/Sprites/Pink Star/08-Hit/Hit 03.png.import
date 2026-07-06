@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fc6tgytwc0hg"
-path="res://.godot/imported/Hit 03.png-a473ec3b3a0e14a69bf493c453e45139.ctex"
+path="res://.godot/imported/Hit 03.png-9b61e67a2882dda346466f77648c1157.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 03.png"
-dest_files=["res://.godot/imported/Hit 03.png-a473ec3b3a0e14a69bf493c453e45139.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 03.png"
+dest_files=["res://.godot/imported/Hit 03.png-9b61e67a2882dda346466f77648c1157.ctex"]
 
 [params]
 

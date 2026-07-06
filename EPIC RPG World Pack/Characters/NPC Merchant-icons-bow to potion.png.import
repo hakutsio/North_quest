@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk1p0k6o8wli"
-path="res://.godot/imported/NPC Merchant-icons-bow to potion.png-c512917809b681ede98b9643de919242.ctex"
+path="res://.godot/imported/NPC Merchant-icons-bow to potion.png-adb6f0b1e3081a99a8a6e95618e08490.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/Characters/NPC Merchant-icons-bow to potion.png"
-dest_files=["res://.godot/imported/NPC Merchant-icons-bow to potion.png-c512917809b681ede98b9643de919242.ctex"]
+source_file="res://EPIC RPG World Pack/Characters/NPC Merchant-icons-bow to potion.png"
+dest_files=["res://.godot/imported/NPC Merchant-icons-bow to potion.png-adb6f0b1e3081a99a8a6e95618e08490.ctex"]
 
 [params]
 

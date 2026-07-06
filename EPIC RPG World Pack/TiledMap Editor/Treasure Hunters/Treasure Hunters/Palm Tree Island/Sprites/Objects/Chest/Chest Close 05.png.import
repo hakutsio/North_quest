@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkkmoayr5rsb7"
-path="res://.godot/imported/Chest Close 05.png-7e8e72759fe3247fa31f681c56445618.ctex"
+path="res://.godot/imported/Chest Close 05.png-c2e2e67a5e2f42cc247110a2ceb1b317.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 05.png"
-dest_files=["res://.godot/imported/Chest Close 05.png-7e8e72759fe3247fa31f681c56445618.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 05.png"
+dest_files=["res://.godot/imported/Chest Close 05.png-c2e2e67a5e2f42cc247110a2ceb1b317.ctex"]
 
 [params]
 

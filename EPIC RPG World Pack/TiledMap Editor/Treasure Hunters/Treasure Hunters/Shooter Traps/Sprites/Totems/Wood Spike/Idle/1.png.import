@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buspvykdd2nq2"
-path="res://.godot/imported/1.png-362eaef05da928d275a180800ffb63ce.ctex"
+path="res://.godot/imported/1.png-8af003a5cf0c4cc84340efaacc968feb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Idle/1.png"
-dest_files=["res://.godot/imported/1.png-362eaef05da928d275a180800ffb63ce.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Idle/1.png"
+dest_files=["res://.godot/imported/1.png-8af003a5cf0c4cc84340efaacc968feb.ctex"]
 
 [params]
 

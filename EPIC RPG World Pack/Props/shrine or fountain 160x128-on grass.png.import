@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgp0vc0m7ixud"
-path="res://.godot/imported/shrine or fountain 160x128-on grass.png-d370c6382f643f66c42f8b6125cf1ae5.ctex"
+path="res://.godot/imported/shrine or fountain 160x128-on grass.png-55a2ea29bf66200d1f5f99db90ad26ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/Props/shrine or fountain 160x128-on grass.png"
-dest_files=["res://.godot/imported/shrine or fountain 160x128-on grass.png-d370c6382f643f66c42f8b6125cf1ae5.ctex"]
+source_file="res://EPIC RPG World Pack/Props/shrine or fountain 160x128-on grass.png"
+dest_files=["res://.godot/imported/shrine or fountain 160x128-on grass.png-55a2ea29bf66200d1f5f99db90ad26ea.ctex"]
 
 [params]
 

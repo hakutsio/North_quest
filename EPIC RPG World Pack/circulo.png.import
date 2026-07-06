@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jsmib8a0spp0"
-path="res://.godot/imported/circulo.png-a7400ce697804dfd7c15566ebc8e05f8.ctex"
+path="res://.godot/imported/circulo.png-0fa13c67f1a8e5a31bf6230f8af2b2cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/circulo.png"
-dest_files=["res://.godot/imported/circulo.png-a7400ce697804dfd7c15566ebc8e05f8.ctex"]
+source_file="res://EPIC RPG World Pack/circulo.png"
+dest_files=["res://.godot/imported/circulo.png-0fa13c67f1a8e5a31bf6230f8af2b2cb.ctex"]
 
 [params]
 

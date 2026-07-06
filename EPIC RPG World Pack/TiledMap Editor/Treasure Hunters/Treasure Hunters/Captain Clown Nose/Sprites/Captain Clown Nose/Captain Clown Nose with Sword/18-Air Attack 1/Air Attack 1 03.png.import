@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhwcigke8iiun"
-path="res://.godot/imported/Air Attack 1 03.png-847ddb1437b0dda42aabf44cf3e83e07.ctex"
+path="res://.godot/imported/Air Attack 1 03.png-77eb5f6d95a9af73eac4c373093aa56c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 03.png"
-dest_files=["res://.godot/imported/Air Attack 1 03.png-847ddb1437b0dda42aabf44cf3e83e07.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 03.png"
+dest_files=["res://.godot/imported/Air Attack 1 03.png-77eb5f6d95a9af73eac4c373093aa56c.ctex"]
 
 [params]
 

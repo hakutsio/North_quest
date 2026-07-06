@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0m23j0rqtl3v"
-path="res://.godot/imported/Interrogation In 02.png-52a843757f63751cb8a9bd91fc1ba761.ctex"
+path="res://.godot/imported/Interrogation In 02.png-1f6e56e9818902850d88bd6a679d7f35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Dialogue/Interrogation/Interrogation In 02.png"
-dest_files=["res://.godot/imported/Interrogation In 02.png-52a843757f63751cb8a9bd91fc1ba761.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Dialogue/Interrogation/Interrogation In 02.png"
+dest_files=["res://.godot/imported/Interrogation In 02.png-1f6e56e9818902850d88bd6a679d7f35.ctex"]
 
 [params]
 

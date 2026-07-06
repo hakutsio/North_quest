@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yt1on8k43cu1"
-path="res://.godot/imported/Atlas-Props.png-ccd40a3f18cf7e55108d2fbf41ef4de9.ctex"
+path="res://.godot/imported/Atlas-Props.png-807ed847fd643b9171ab5b1124a3245f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/Props/Atlas-Props.png"
-dest_files=["res://.godot/imported/Atlas-Props.png-ccd40a3f18cf7e55108d2fbf41ef4de9.ctex"]
+source_file="res://EPIC RPG World Pack/Props/Atlas-Props.png"
+dest_files=["res://.godot/imported/Atlas-Props.png-807ed847fd643b9171ab5b1124a3245f.ctex"]
 
 [params]
 

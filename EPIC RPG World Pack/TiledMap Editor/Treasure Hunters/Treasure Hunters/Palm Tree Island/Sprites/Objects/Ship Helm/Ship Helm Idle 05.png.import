@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://t1ifa8grbupb"
-path="res://.godot/imported/Ship Helm Idle 05.png-c3a9fe8625fb35c72aa92d1f23401515.ctex"
+path="res://.godot/imported/Ship Helm Idle 05.png-9c5d0b0a55087d055361c54473143a8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 05.png"
-dest_files=["res://.godot/imported/Ship Helm Idle 05.png-c3a9fe8625fb35c72aa92d1f23401515.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 05.png"
+dest_files=["res://.godot/imported/Ship Helm Idle 05.png-9c5d0b0a55087d055361c54473143a8f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://doieggvhe33c3"
-path="res://.godot/imported/Run 03.png-b283acdd708990648f8f970ff0a9fa80.ctex"
+path="res://.godot/imported/Run 03.png-f783618e9b17c3182f811d8aa157224b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Run 03.png"
-dest_files=["res://.godot/imported/Run 03.png-b283acdd708990648f8f970ff0a9fa80.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Run 03.png"
+dest_files=["res://.godot/imported/Run 03.png-f783618e9b17c3182f811d8aa157224b.ctex"]
 
 [params]
 

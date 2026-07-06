@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cynjxulcskjhl"
-path="res://.godot/imported/Run Sword 05.png-62170c89631bdef89f59f57f6f40bd06.ctex"
+path="res://.godot/imported/Run Sword 05.png-d8516c5c7f50ae37c565534f3bbf0b53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 05.png"
-dest_files=["res://.godot/imported/Run Sword 05.png-62170c89631bdef89f59f57f6f40bd06.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 05.png"
+dest_files=["res://.godot/imported/Run Sword 05.png-d8516c5c7f50ae37c565534f3bbf0b53.ctex"]
 
 [params]
 

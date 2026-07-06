@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b05p2jto5utg4"
-path="res://.godot/imported/altar 224x288 - standard.png-63c0a885ca1b4ec351f2d2b2b96a21ca.ctex"
+path="res://.godot/imported/altar 224x288 - standard.png-19c7a9fd41c5366da60960f163059ca9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/Props/altar 224x288 - standard.png"
-dest_files=["res://.godot/imported/altar 224x288 - standard.png-63c0a885ca1b4ec351f2d2b2b96a21ca.ctex"]
+source_file="res://EPIC RPG World Pack/Props/altar 224x288 - standard.png"
+dest_files=["res://.godot/imported/altar 224x288 - standard.png-19c7a9fd41c5366da60960f163059ca9.ctex"]
 
 [params]
 

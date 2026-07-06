@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlw3fyj5s2554"
-path="res://.godot/imported/Run 02.png-c0b2899b176d466891fc6566fa2915f1.ctex"
+path="res://.godot/imported/Run 02.png-b6332643582a5164ea74a1fb2555a5d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 02.png"
-dest_files=["res://.godot/imported/Run 02.png-c0b2899b176d466891fc6566fa2915f1.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 02.png"
+dest_files=["res://.godot/imported/Run 02.png-b6332643582a5164ea74a1fb2555a5d6.ctex"]
 
 [params]
 

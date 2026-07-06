@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0my4iqh5yqme"
-path="res://.godot/imported/Tileset-Terrain2.png-a1f6f24f01317cb83841adaf83c24e71.ctex"
+path="res://.godot/imported/Tileset-Terrain2.png-814886e04d2df0bf58c7efd3442a4968.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/Tilesets/Tileset-Terrain2.png"
-dest_files=["res://.godot/imported/Tileset-Terrain2.png-a1f6f24f01317cb83841adaf83c24e71.ctex"]
+source_file="res://EPIC RPG World Pack/Tilesets/Tileset-Terrain2.png"
+dest_files=["res://.godot/imported/Tileset-Terrain2.png-814886e04d2df0bf58c7efd3442a4968.ctex"]
 
 [params]
 

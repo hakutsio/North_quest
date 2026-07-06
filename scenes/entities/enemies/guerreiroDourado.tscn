@@ -5,6 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://beqrusl4gnffg" path="res://Tiny Swords (Free Pack)/Units/Yellow Units/Warrior/Warrior_Attack1.png" id="3_ncaad"]
 [ext_resource type="Texture2D" uid="uid://djxm5j28euaj3" path="res://Tiny Swords (Free Pack)/Units/Yellow Units/Warrior/Warrior_Run.png" id="4_g3r2r"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3r2r"]
+radius = 27.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ncaad"]
+radius = 21.0
+height = 66.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_soblo"]
 size = Vector2(8, 43.5)
 
@@ -379,13 +386,15 @@ texture = ExtResource("2_llmub")
 hframes = 8
 
 [node name="CollisionShape2D" parent="." index="2" unique_id=2025509994]
-position = Vector2(-1, 16)
+position = Vector2(-4, 7)
+shape = SubResource("CircleShape2D_g3r2r")
 
-[node name="CollisionShape2D" parent="hurtBox" parent_id_path=PackedInt32Array(1160843126) index="0" unique_id=1532269988]
-position = Vector2(0, 3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox" parent_id_path=PackedInt32Array(1160843126) index="0" unique_id=133959567]
+shape = SubResource("CapsuleShape2D_ncaad")
 
 [node name="CollisionShape2D" parent="hitBox" parent_id_path=PackedInt32Array(1005801795) index="0" unique_id=570683609]
 rotation = -0.991347
+shape = SubResource("RectangleShape2D_soblo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6" unique_id=1995761199]
 libraries/ = SubResource("AnimationLibrary_0alrp")

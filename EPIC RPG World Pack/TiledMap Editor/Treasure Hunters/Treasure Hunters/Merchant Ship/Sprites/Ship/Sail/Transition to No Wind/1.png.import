@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://comn655e7358p"
-path="res://.godot/imported/1.png-5a8a823e8a030dcdbd5e3ebbc0ab8328.ctex"
+path="res://.godot/imported/1.png-c8ab93e8c1f8a893d5655cc9b33dab95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Ship/Sail/Transition to No Wind/1.png"
-dest_files=["res://.godot/imported/1.png-5a8a823e8a030dcdbd5e3ebbc0ab8328.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Ship/Sail/Transition to No Wind/1.png"
+dest_files=["res://.godot/imported/1.png-c8ab93e8c1f8a893d5655cc9b33dab95.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bninch1adfiyu"
-path="res://.godot/imported/Hit 02.png-06e4e181862b662947f9467c41ecda1b.ctex"
+path="res://.godot/imported/Hit 02.png-4936c67b75e27f1396608fa90b2518f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/06-Hit/Hit 02.png"
-dest_files=["res://.godot/imported/Hit 02.png-06e4e181862b662947f9467c41ecda1b.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/06-Hit/Hit 02.png"
+dest_files=["res://.godot/imported/Hit 02.png-4936c67b75e27f1396608fa90b2518f9.ctex"]
 
 [params]
 

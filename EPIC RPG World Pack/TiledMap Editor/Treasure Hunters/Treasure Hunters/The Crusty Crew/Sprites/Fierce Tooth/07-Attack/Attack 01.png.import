@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brrfheld53b7g"
-path="res://.godot/imported/Attack 01.png-e11e404477e3ea8a756dd4e75ecb5f52.ctex"
+path="res://.godot/imported/Attack 01.png-20f42630813384caa41a0ab95560ad72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 01.png"
-dest_files=["res://.godot/imported/Attack 01.png-e11e404477e3ea8a756dd4e75ecb5f52.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 01.png"
+dest_files=["res://.godot/imported/Attack 01.png-20f42630813384caa41a0ab95560ad72.ctex"]
 
 [params]
 

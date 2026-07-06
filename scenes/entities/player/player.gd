@@ -21,6 +21,7 @@ var state: State = State.IDLE
 var move_direction: Vector2 = Vector2(0,0)
 var attack_speed: float
 var hitpoints_max: int
+var popMissao: bool = false
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var animation_playback: AnimationNodeStateMachinePlayback = $AnimationTree["parameters/playback"]
@@ -30,16 +31,28 @@ func _ready() -> void:
 	animation_tree.set_active(true)
 	calculate_stats()
 	
+func reproduzirSom(caminho:String, volume:float = 0.0):
+	LevelData.reproduzirAudio(caminho,volume)
+	
+	
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and popMissao == false:
 		attack()
 
 func _physics_process(_delta: float) -> void:
+	if popMissao == true:
+		velocity = Vector2(0, 0)
+		move_and_slide()
+		state = State.IDLE
+		update_animation()
+		return
 	if not state == State.ATTACK:
 		movement_loop()
 		
 func calculate_stats() -> void:
 	attack_speed = Equations.calculate_attack_speed()
+	speed = int(400 * Equations.get_level_multiplier())
+	attack_damage = int(60 * Equations.get_level_multiplier())
 	var time_factor: float = Equations.BASE_ATTACK_SPEED / attack_speed
 	animation_tree.set("parameters/attack/TimeScale/scale", time_factor)
 	print("my fuck velociti attack", attack_speed)
@@ -84,6 +97,7 @@ func attack() -> void:
 	
 	var mouse_pos: Vector2 = get_global_mouse_position()
 	var attack_dir: Vector2 = (mouse_pos - global_position).normalized()
+	reproduzirSom("res://assets/audio/music/attackEspada.mp3")
 	$Sprite2D.flip_h = attack_dir.x < 0 and abs(attack_dir.x) >= abs(attack_dir.y)
 	animation_tree.set("parameters/attack/BlendSpace2D/blend_position", attack_dir)
 	update_animation()
@@ -92,7 +106,8 @@ func attack() -> void:
 	state = State.IDLE
 	
 func ganharVida(vida: int) -> void:
-	hitpoints += vida
+	reproduzirSom("res://assets/audio/music/comendoCarne.mp3")
+	hitpoints = min(hitpoints + vida, hitpoints_max)
 	@warning_ignore("integer_division")
 	update_hp_bar.emit((hitpoints * 100) / hitpoints_max)
 	
@@ -102,6 +117,7 @@ func take_damage(damage_taken: int) -> void:
 	@warning_ignore("integer_division")
 	update_hp_bar.emit((hitpoints * 100) / hitpoints_max)
 	print(hitpoints)
+	reproduzirSom("res://assets/audio/music/tomandoDano.mp3")
 	if hitpoints <= 0:
 		death()
 		

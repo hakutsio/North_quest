@@ -19,10 +19,12 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact")and player != null and estaAberto == false:
+		LevelData.reproduzirAudio("res://assets/audio/music/bauAbrindov2.mp3", 0.0)
 		$AnimatedSprite2D.play("abrir")
 		estaAberto = true
 		if codigoItem.contains("missao"):
 			emit_signal("desbloquearBau", codigoItem)
+			$"../../UI/dialogo".inicializarDialogo(codigoItem)
 			if codigoItem == "missao1":
-				$"../../UI/Sprite2D".show()
+				$"../../UI/bussola/Sprite2D".show()
 				

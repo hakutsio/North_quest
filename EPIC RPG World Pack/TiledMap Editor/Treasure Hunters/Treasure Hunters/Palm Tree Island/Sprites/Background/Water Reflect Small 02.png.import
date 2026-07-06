@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cah4krh3fijuq"
-path="res://.godot/imported/Water Reflect Small 02.png-ec76c02b5e59dc7a40be855644ef6a7e.ctex"
+path="res://.godot/imported/Water Reflect Small 02.png-75cfaa73019b652382289d4f1cf2363e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Small 02.png"
-dest_files=["res://.godot/imported/Water Reflect Small 02.png-ec76c02b5e59dc7a40be855644ef6a7e.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Small 02.png"
+dest_files=["res://.godot/imported/Water Reflect Small 02.png-75cfaa73019b652382289d4f1cf2363e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhhsnvkb2kis7"
-path="res://.godot/imported/Sword Embedded 01.png-68c664dea620c7bc17eb76ac32ff8b44.ctex"
+path="res://.godot/imported/Sword Embedded 01.png-58be41cf9563a8a54496ccaf0e88651e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/23-Sword Embedded/Sword Embedded 01.png"
-dest_files=["res://.godot/imported/Sword Embedded 01.png-68c664dea620c7bc17eb76ac32ff8b44.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/23-Sword Embedded/Sword Embedded 01.png"
+dest_files=["res://.godot/imported/Sword Embedded 01.png-58be41cf9563a8a54496ccaf0e88651e.ctex"]
 
 [params]
 

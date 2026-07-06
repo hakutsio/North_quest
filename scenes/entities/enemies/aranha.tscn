@@ -6,9 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://cx1vgbxgk36c7" path="res://Tiny Swords (Free Pack)/Tiny Swords (Enemy Pack)/Tiny Swords (Enemy Pack)/Enemy Pack/Spider/Spider_Attack.png" id="3_t6khv"]
 [ext_resource type="Texture2D" uid="uid://d1fmpagj42bgc" path="res://Tiny Swords (Free Pack)/Tiny Swords (Enemy Pack)/Tiny Swords (Enemy Pack)/Enemy Pack/Spider/Spider_Run.png" id="4_wlyct"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t6khv"]
-radius = 23.0
-height = 74.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_2s1df"]
+radius = 31.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wlyct"]
+radius = 20.584652
+height = 77.654396
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wlyct"]
 radius = 22.847319
@@ -379,10 +382,14 @@ death_packed = ExtResource("2_wlyct")
 texture = ExtResource("2_051j6")
 hframes = 8
 
-[node name="CollisionShape2D" parent="hurtBox" parent_id_path=PackedInt32Array(1160843126) index="0" unique_id=1532269988]
-position = Vector2(-1.0000002, -13.000002)
-rotation = 1.6545721
-shape = SubResource("CapsuleShape2D_t6khv")
+[node name="CollisionShape2D" parent="." index="2" unique_id=2025509994]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_2s1df")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox" parent_id_path=PackedInt32Array(1160843126) index="0" unique_id=1590678026]
+position = Vector2(1.0000005, -4.9999995)
+rotation = 1.7610372
+shape = SubResource("CapsuleShape2D_wlyct")
 
 [node name="hitBox" parent="." index="5" unique_id=1005801795]
 position = Vector2(0, 0)

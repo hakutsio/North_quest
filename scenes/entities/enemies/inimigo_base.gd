@@ -20,8 +20,10 @@ enum State {
 @export var exp_reward: int = 600
 @export_category("Related Scenes")
 @export var death_packed: PackedScene
+@export var morteTroll: bool = false
 
 var state: State = State.IDLE
+var taMorto: bool = false
 
 @onready var animation_player = $AnimationPlayer
 @onready var spaw_point: Vector2 = global_position
@@ -29,6 +31,8 @@ var state: State = State.IDLE
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 
 func _physics_process(delta: float) -> void:
+	if taMorto == true:
+		return
 	if state == State.DEAD:
 		return
 	if state == State.ATTACK:
@@ -106,11 +110,15 @@ func take_damage(damage_taken: int) -> void:
 		
 
 func death() -> void:
+	taMorto = true
 	died.emit(exp_reward)
-	var death_scene: Node2D = death_packed.instantiate()
-	%Effects.add_child(death_scene)
-	death_scene.global_position = global_position + Vector2(0.0, -32.0)
-	queue_free() 
+	if morteTroll:
+		animation_player.play("morte")
+	else:
+		var death_scene: Node2D = death_packed.instantiate()
+		%Effects.add_child(death_scene)
+		death_scene.global_position = global_position + Vector2(0.0, -32.0)
+		queue_free() 
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
@@ -120,3 +128,9 @@ func _on_hit_box_area_entered(area: Area2D) -> void:
 
 func _on_died(exp: int) -> void:
 	pass # Replace with function body.
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "morte":
+		LevelData.vitoria = true
+		get_tree().change_scene_to_file("res://scenes/main/end_game_screen.tscn")

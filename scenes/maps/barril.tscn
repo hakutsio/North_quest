@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b6sybqwdjawyo" path="res://scenes/maps/barril.gd" id="1_kd85u"]
 [ext_resource type="Texture2D" uid="uid://s4ioatw68gfc" path="res://Tiny Swords (Free Pack)/Tiny Swords (Update 010)/Factions/Goblins/Troops/Barrel/Purple/Barrel_Purple.png" id="2_7qcmc"]
-[ext_resource type="AudioStream" uid="uid://duterwlg7mgf5" path="res://assets/audio/music/explosaoBarril.mp3" id="2_e3xt6"]
 [ext_resource type="Texture2D" uid="uid://ddka0byeyyqxm" path="res://assets/sprites/circulo.png" id="3_e3xt6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t770y"]
@@ -70,9 +69,6 @@ radius = 152.0296
 
 [node name="barril" type="Area2D" unique_id=1826984603]
 script = ExtResource("1_kd85u")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1736817672]
-stream = ExtResource("2_e3xt6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1655721069]
 texture = ExtResource("2_7qcmc")

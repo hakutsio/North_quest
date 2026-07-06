@@ -15,8 +15,12 @@ func _on_configurações_pressed() -> void:
 
 
 func _on_sobre_pressed() -> void:
-	about_pressed.emit("main_menu")
+	$texture.show()
 
 
 func _on_sair_pressed() -> void:
 	exit_pressed.emit("main_menu")
+
+
+func _on_fechar_pressed() -> void:
+	$texture.hide()

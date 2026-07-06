@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp068tcyf50lp"
-path="res://.godot/imported/Dead Ground 04.png-def0d72d42c92b6f2292696b8fc6c6ac.ctex"
+path="res://.godot/imported/Dead Ground 04.png-89857349ac1f80c9df1b07db3c4a60de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 04.png"
-dest_files=["res://.godot/imported/Dead Ground 04.png-def0d72d42c92b6f2292696b8fc6c6ac.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 04.png"
+dest_files=["res://.godot/imported/Dead Ground 04.png-89857349ac1f80c9df1b07db3c4a60de.ctex"]
 
 [params]
 

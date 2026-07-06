@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bit1vuim2esd8"
-path="res://.godot/imported/01.png-9d60a1782d9e2bd6d20989930eb1c202.ctex"
+path="res://.godot/imported/01.png-7b6deec724fc5a21633ca76443e86cea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Pirate Ship/Sprites/Decorations/Candle/Candle Light/01.png"
-dest_files=["res://.godot/imported/01.png-9d60a1782d9e2bd6d20989930eb1c202.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Pirate Ship/Sprites/Decorations/Candle/Candle Light/01.png"
+dest_files=["res://.godot/imported/01.png-7b6deec724fc5a21633ca76443e86cea.ctex"]
 
 [params]
 

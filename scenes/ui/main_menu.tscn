@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://crpe6wlm1i2bo" path="res://assets/ui/buttons/Button_Hover_3Slides.png" id="3_x2yvf"]
 [ext_resource type="FontFile" uid="uid://d00h4ctsh5ohj" path="res://assets/fonts/PirataOne-Regular.ttf" id="4_m1kxf"]
 [ext_resource type="Script" uid="uid://oceql178qyos" path="res://scenes/ui/video_stream_player.gd" id="4_wb0q5"]
+[ext_resource type="Texture2D" uid="uid://c1uki818yxh5k" path="res://assets/ui/elements/WhatsApp_Image_2026-07-03_at_19.31.44-removebg-preview.png" id="9_q85j6"]
 [ext_resource type="Texture2D" uid="uid://cehadrwb5hjei" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/escudoTitulo.png" id="37_bvtfn"]
 
 [sub_resource type="GDScript" id="GDScript_btxxm"]
@@ -141,6 +142,56 @@ text = "Sair"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="texture" type="TextureRect" parent="." unique_id=59313336]
+visible = false
+layout_mode = 0
+offset_left = 474.0
+offset_top = 154.0
+offset_right = 514.0
+offset_bottom = 194.0
+
+[node name="mascara" type="ColorRect" parent="texture" unique_id=391852246]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -474.0
+offset_top = -150.0
+offset_right = 766.0
+offset_bottom = 530.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.40784314)
+
+[node name="Label" type="Label" parent="texture" unique_id=1019638406]
+layout_mode = 0
+offset_left = -181.0
+offset_top = -124.0
+offset_right = 296.0
+offset_bottom = 567.0
+autowrap_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="texture/Label" unique_id=32406683]
+position = Vector2(245.00002, 322.99997)
+scale = Vector2(1.2836186, 1.1540984)
+texture = ExtResource("9_q85j6")
+
+[node name="fechar" type="Button" parent="texture/Label" unique_id=1409775811]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -31.0
+offset_right = 30.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Fechar"
+
 [connection signal="pressed" from="VBoxContainer/Novo Jogo" to="." method="_on_novo_jogo_pressed"]
 [connection signal="pressed" from="VBoxContainer/Sobre" to="." method="_on_sobre_pressed"]
 [connection signal="pressed" from="VBoxContainer/Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="texture/Label/fechar" to="." method="_on_fechar_pressed"]

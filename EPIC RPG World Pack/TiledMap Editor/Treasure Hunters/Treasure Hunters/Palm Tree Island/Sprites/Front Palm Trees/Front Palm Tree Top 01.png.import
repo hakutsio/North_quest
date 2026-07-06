@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbk1jo6nriod0"
-path="res://.godot/imported/Front Palm Tree Top 01.png-f0128c1ac0889528d83399106fb08a91.ctex"
+path="res://.godot/imported/Front Palm Tree Top 01.png-054023e8a52b1274b71d451fb228086e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 01.png"
-dest_files=["res://.godot/imported/Front Palm Tree Top 01.png-f0128c1ac0889528d83399106fb08a91.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 01.png"
+dest_files=["res://.godot/imported/Front Palm Tree Top 01.png-054023e8a52b1274b71d451fb228086e.ctex"]
 
 [params]
 

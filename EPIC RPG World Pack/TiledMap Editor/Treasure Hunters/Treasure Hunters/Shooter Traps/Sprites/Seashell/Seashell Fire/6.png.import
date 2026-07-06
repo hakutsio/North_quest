@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwvpblb0br5cf"
-path="res://.godot/imported/6.png-f0b257ad0048407cfd5c4874cb005613.ctex"
+path="res://.godot/imported/6.png-5d96f2a937bde1c0913d3006f8fcb356.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/6.png"
-dest_files=["res://.godot/imported/6.png-f0b257ad0048407cfd5c4874cb005613.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/6.png"
+dest_files=["res://.godot/imported/6.png-5d96f2a937bde1c0913d3006f8fcb356.ctex"]
 
 [params]
 

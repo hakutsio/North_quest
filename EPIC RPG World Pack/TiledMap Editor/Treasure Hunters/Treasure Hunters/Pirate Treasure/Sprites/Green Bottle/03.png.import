@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3upgvys0j4k3"
-path="res://.godot/imported/03.png-3755fb2cdba91e7cb286fc25610ce4fe.ctex"
+path="res://.godot/imported/03.png-1f636a21804438b45edca71bb406a1c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Pirate Treasure/Sprites/Green Bottle/03.png"
-dest_files=["res://.godot/imported/03.png-3755fb2cdba91e7cb286fc25610ce4fe.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Pirate Treasure/Sprites/Green Bottle/03.png"
+dest_files=["res://.godot/imported/03.png-1f636a21804438b45edca71bb406a1c6.ctex"]
 
 [params]
 

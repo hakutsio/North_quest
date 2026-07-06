@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://c2xth8bj835n6"]
 
 [ext_resource type="Texture2D" uid="uid://bk7hqqe75o3u5" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Water Foam.png" id="1_djas7"]
+[ext_resource type="Script" uid="uid://byk53ca83w651" path="res://scenes/maps/mapa_1.gd" id="1_x5qpe"]
 [ext_resource type="Texture2D" uid="uid://r126g2pkom82" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png" id="2_qjly0"]
 [ext_resource type="Texture2D" uid="uid://b8fd43tx0pu3q" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Tilemap_color3.png" id="3_41n40"]
 [ext_resource type="Texture2D" uid="uid://xvehsa6m2xhq" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Shadow.png" id="4_txexx"]
@@ -57,6 +58,8 @@
 [ext_resource type="Texture2D" uid="uid://degwjelpyhl62" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner_Slots.png" id="50_4tp5c"]
 [ext_resource type="Script" uid="uid://m0gnwfatlaa7" path="res://scenes/maps/missoes.gd" id="51_4tp5c"]
 [ext_resource type="Texture2D" uid="uid://b427xwhx88ngq" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_09.png" id="52_d11q5"]
+[ext_resource type="Texture2D" uid="uid://3605ghvfloym" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Human Avatars/Avatars_01.png" id="57_buf8l"]
+[ext_resource type="Script" uid="uid://c1awsg2dxn1x6" path="res://scenes/maps/dialogo.gd" id="57_u1iih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqka0"]
 texture = ExtResource("2_qjly0")
@@ -1675,17 +1678,15 @@ height = 106.16992
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0hy0"]
 size = Vector2(67, 67)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_soblo"]
-size = Vector2(8, 43.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyq86"]
-size = Vector2(8, 43.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_1urg7"]
+radius = 22.022715
 
 [sub_resource type="LabelSettings" id="LabelSettings_to701"]
 font = ExtResource("30_gs0xm")
 
 [node name="stagio1" type="Node2D" unique_id=1967486007]
 y_sort_enabled = true
+script = ExtResource("1_x5qpe")
 
 [node name="mapa1" type="Node2D" parent="." unique_id=1761276397]
 y_sort_enabled = true
@@ -1716,7 +1717,7 @@ tile_map_data = PackedByteArray("AAApAIYAAgAAAAAAAAApAIcABAAAAAAAAAAqAIcAAQAAAAA
 tile_set = ExtResource("6_q83g8")
 
 [node name="cerca" type="TileMapLayer" parent="mapa1" unique_id=187047468]
-tile_map_data = PackedByteArray("AABDACAAAQACAAIAAABEACAAAQACAAAAAABFACAAAQACAAAAAABGACAAAQADAAAAAABGACEAAQADAAEAAABGACIAAQADAAEAAABGACMAAQADAAIAAABFACMAAQABAAAAAABEACMAAQABAAAAAABDACMAAQAAAAIAAABDACIAAQADAAEAAAAcAB0AAQACAAIAAAAdAB0AAQACAAAAAAAeAB0AAQABAAIAAAAgAB0AAQACAAIAAAAhAB0AAQABAAAAAAAiAB0AAQABAAAAAAAjAB0AAQADAAIAAAAmAB0AAQAAAAIAAAAnAB0AAQABAAIAAAAqABsAAQACAAIAAAArABsAAQADAAIAAAArABoAAQAAAAAAAAAsABoAAQADAAIAAAAsABkAAQAAAAAAAAAtABkAAQABAAIAAAAvABgAAQACAAIAAAAwABgAAQADAAIAAAAwABcAAQADAAEAAAAwABYAAQAAAAAAAAAxABYAAQADAAIAAAAxABUAAQADAAEAAAAyABMAAQADAAIAAAAyABIAAQAAAAEAAAAzABEAAQADAAIAAAAzABAAAQAAAAEAAAAzAA0AAQADAAIAAAAzAAwAAQADAAAAAAAxAAsAAQADAAEAAAAxAAoAAQAAAAEAAAAdAAoAAQABAAIAAAAcAAoAAQACAAAAAAAbAAoAAQAAAAAAAAAbAAsAAQAAAAEAAAAbAAwAAQADAAEAAAAbAA0AAQAAAAEAAAAbAA4AAQAAAAEAAAAbAA8AAQAAAAIAAAAcAA8AAQABAAAAAAAdAA8AAQABAAIAAAAeABUAAQACAAIAAAAfABUAAQACAAAAAAAgABUAAQACAAAAAAAhABUAAQACAAAAAAAiABUAAQADAAIAAAAiABQAAQAAAAEAAAAlABMAAQACAAIAAAAmABMAAQADAAAAAAAmABQAAQAAAAIAAAAnABQAAQADAAIAAAAnABIAAQADAAEAAAAnABMAAQAAAAEAAAAmABoAAQADAAEAAAAmABsAAQAAAAEAAAAmABwAAQADAAEAAAAjABoAAQADAAEAAAAjABsAAQAAAAEAAAAjABwAAQAAAAEAAAAjABgAAQAAAAEAAAAjABkAAQAAAAEAAAAmABgAAQAAAAAAAAAmABkAAQAAAAEAAAAnABgAAQABAAIAAAAlAAkAAQABAAIAAAAkAAkAAQABAAAAAAAjAAkAAQAAAAAAAAAjAAoAAQADAAIAAAAiAAoAAQACAAIAAAAnAAoAAQAAAAEAAAAnAAsAAQADAAEAAAAnAAwAAQADAAIAAAAmAAwAAQABAAAAAAAlAAwAAQAAAAAAAAAlAA0AAQADAAIAAAAkAA0AAQACAAIAAAAqABAAAQAAAAEAAAAqABEAAQAAAAEAAAAqABIAAQADAAEAAAAqABMAAQADAAEAAAAqABQAAQADAAEAAAAqABUAAQAAAAEAAAAqABYAAQADAAIAAAApABYAAQABAAAAAAAoABYAAQACAAIAAABeACUAAQACAAIAAABfACUAAQACAAAAAABgACUAAQADAAAAAABgACYAAQAAAAEAAABgACcAAQADAAEAAABgACgAAQAAAAEAAABgACkAAQADAAIAAABfACkAAQACAAAAAABeACkAAQACAAAAAABdACkAAQACAAIAAABbACUAAQACAAIAAABcACUAAQABAAIAAABiACEAAQABAAIAAABhACEAAQAAAAAAAABhACIAAQADAAEAAABhACMAAQAAAAIAAABiACMAAQACAAAAAABjACMAAQACAAAAAABkACMAAQADAAIAAABgAAsAAQACAAIAAABhAAsAAQABAAAAAABiAAsAAQABAAAAAABjAAsAAQABAAAAAABkAAsAAQADAAIAAABkAAoAAQAAAAAAAABlAAoAAQACAAAAAABnAAoAAQADAAAAAABnAAsAAQAAAAIAAABoAAsAAQABAAAAAABpAAsAAQABAAIAAABmAAoAAQACAAAAAABrAAsAAQACAAIAAABsAAsAAQABAAAAAABtAAsAAQACAAAAAABuAAsAAQABAAAAAABvAAsAAQABAAAAAABwAAsAAQADAAAAAABwAAwAAQAAAAIAAABxAAwAAQABAAAAAAByAAwAAQADAAIAAAByAAsAAQAAAAAAAABzAAsAAQABAAAAAAB0AAsAAQADAAIAAAB0AAoAAQAAAAEAAAB0AAkAAQAAAAAAAAB1AAkAAQACAAAAAAB2AAkAAQABAAAAAAB3AAkAAQACAAAAAAB4AAkAAQACAAAAAAB5AAkAAQADAAAAAAB5AAoAAQADAAEAAAB5AAsAAQADAAEAAAB5AAwAAQADAAEAAAB5AA0AAQAAAAEAAAB5AA4AAQAAAAEAAAB5AA8AAQAAAAEAAAB5ABAAAQADAAIAAAB4ABAAAQAAAAAAAAB4ABEAAQADAAIAAAB3ABEAAQACAAAAAAB2ABEAAQACAAAAAAB1ABEAAQACAAIAAABoABYAAQABAAIAAABtACAAAQAAAAAAAABtACEAAQADAAEAAABtACIAAQADAAEAAABtACMAAQADAAIAAABuACAAAQABAAIAAAAaADwAAQACAAIAAAAbADwAAQABAAAAAAAcADwAAQACAAAAAAAdADwAAQADAAAAAAAdAD0AAQADAAEAAAAdAD4AAQAAAAEAAAAdAD8AAQAAAAEAAAAdAEAAAQADAAIAAAAcAEAAAQACAAIAAAAYADwAAQABAAIAAAAXADwAAQAAAAAAAAAXAD0AAQAAAAEAAAAXAD4AAQADAAEAAAAXAD8AAQADAAEAAAAXAEAAAQAAAAIAAAAYAEAAAQABAAIAAABCAEoAAQAAAAEAAABCAEsAAQAAAAEAAABCAEwAAQAAAAEAAABCAE0AAQADAAIAAAA+AEoAAQADAAEAAAA+AEsAAQADAAEAAAA+AEwAAQADAAEAAAA+AE0AAQADAAIAAACZAGIAAQADAAEAAACZAGMAAQAAAAIAAACaAGMAAQABAAAAAACbAGMAAQADAAAAAACbAGQAAQADAAEAAACbAGUAAQAAAAIAAACcAGUAAQADAAAAAACcAGYAAQAAAAIAAACdAGYAAQABAAAAAACeAGYAAQADAAAAAACeAGcAAQAAAAIAAACfAGcAAQACAAAAAACgAGcAAQABAAAAAAChAGcAAQADAAIAAAChAGYAAQAAAAAAAACiAGYAAQADAAIAAACiAGUAAQAAAAEAAACiAGQAAQADAAEAAACiAGMAAQADAAAAAAChAGMAAQAAAAIAAAChAGIAAQAAAAEAAAChAGEAAQADAAAAAACgAGEAAQABAAAAAACfAGEAAQABAAAAAACeAGEAAQAAAAIAAACeAGAAAQADAAAAAACdAGAAAQABAAAAAACcAGAAAQAAAAIAAACcAF8AAQADAAAAAACbAF8AAQACAAAAAACaAF8AAQACAAAAAACZAF8AAQAAAAAAAACZAGAAAQADAAEAAACZAGEAAQADAAEAAACdAHAAAQABAAAAAACeAHAAAQACAAAAAACfAHAAAQACAAAAAACgAHAAAQACAAAAAAChAHAAAQACAAAAAACiAHAAAQACAAAAAACjAHAAAQACAAAAAACkAHAAAQABAAAAAAClAHAAAQABAAIAAACcAHAAAQABAAAAAACbAHAAAQAAAAIAAACbAG8AAQADAAAAAACaAG8AAQACAAIAAACnAG0AAQABAAAAAACoAGwAAQAAAAEAAACoAGsAAQAAAAEAAACoAGoAAQADAAEAAACoAG0AAQADAAIAAACoAGkAAQADAAEAAACkAGkAAQADAAEAAACkAGoAAQADAAIAAACjAGoAAQAAAAAAAACjAGsAAQADAAIAAACiAGsAAQACAAIAAACkAGgAAQADAAEAAACoAF4AAQABAAIAAACnAF4AAQAAAAIAAACnAF0AAQADAAAAAACmAF0AAQACAAAAAAClAF0AAQAAAAIAAAClAFwAAQADAAAAAACkAFwAAQACAAIAAACcAFEAAQADAAEAAACcAFIAAQAAAAEAAACcAFMAAQAAAAEAAACcAFQAAQADAAEAAACcAFUAAQAAAAEAAACcAFYAAQAAAAEAAACcAFcAAQAAAAEAAACcAFgAAQADAAEAAACcAFkAAQAAAAIAAACdAFkAAQABAAIAAACYAFMAAQADAAAAAACYAFQAAQAAAAEAAACYAFUAAQADAAEAAACXAFMAAQAAAAIAAACXAFIAAQADAAAAAACWAFIAAQAAAAIAAACWAFEAAQADAAAAAACVAFEAAQACAAAAAACUAFEAAQAAAAIAAACUAFAAAQADAAEAAACUAE8AAQADAAAAAACTAE8AAQABAAAAAACSAE8AAQAAAAIAAACSAE4AAQADAAAAAACRAE4AAQACAAIAAACDAEQAAQACAAIAAACEAEQAAQACAAAAAACFAEQAAQACAAAAAACGAEQAAQABAAAAAACHAEQAAQABAAAAAACIAEQAAQADAAAAAACIAEUAAQAAAAIAAACJAEUAAQABAAAAAACKAEUAAQADAAAAAACKAEYAAQAAAAIAAACLAEYAAQABAAIAAAB+AEYAAQABAAIAAAB9AEYAAQACAAAAAAB8AEYAAQAAAAIAAAB8AEUAAQADAAAAAAB7AEUAAQACAAAAAAB6AEUAAQABAAAAAAB5AEUAAQACAAAAAAB4AEUAAQAAAAIAAAB4AEQAAQADAAEAAAB4AEMAAQADAAAAAAB3AEMAAQAAAAIAAAB3AEIAAQADAAAAAAB2AEIAAQACAAAAAAB1AEIAAQABAAAAAAB0AEIAAQAAAAAAAAB0AEMAAQADAAIAAABzAEMAAQAAAAAAAAByAEQAAQACAAAAAABxAEQAAQABAAAAAABwAEQAAQACAAAAAABvAEQAAQABAAAAAABuAEQAAQABAAAAAABtAEQAAQAAAAAAAABzAEQAAQADAAIAAABtAEUAAQADAAIAAABsAEUAAQACAAAAAABrAEUAAQABAAAAAABqAEUAAQACAAIAAABJAEAAAQAAAAEAAABJAEEAAQAAAAIAAABKAEEAAQADAAAAAABKAEIAAQAAAAIAAABLAEIAAQADAAAAAABLAEMAAQAAAAIAAABMAEMAAQADAAAAAABNAEQAAQADAAAAAABMAEQAAQAAAAIAAABNAEUAAQAAAAIAAABOAEUAAQADAAAAAABOAEYAAQAAAAIAAABPAEYAAQADAAAAAABPAEcAAQAAAAIAAABbAEMAAQACAAIAAABcAEMAAQACAAAAAABdAEMAAQACAAAAAABeAEMAAQABAAAAAABfAEMAAQABAAAAAABgAEMAAQACAAAAAABhAEMAAQABAAAAAABiAEMAAQACAAAAAABjAEMAAQABAAIAAAB2ADEAAQACAAIAAAB3ADEAAQADAAAAAAB3ADIAAQADAAEAAAB3ADMAAQADAAEAAAB3ADQAAQAAAAEAAAB3ADUAAQADAAEAAAB3ADYAAQADAAEAAAB3ADcAAQAAAAEAAAB3ADgAAQAAAAEAAAB3ADkAAQAAAAEAAAB3ADoAAQAAAAEAAAB3ADsAAQADAAEAAAB3ADwAAQAAAAIAAAB4ADwAAQABAAIAAABxADEAAQADAAAAAABxADIAAQAAAAIAAAByADIAAQADAAAAAAByADMAAQAAAAIAAABzADMAAQABAAIAAABwADEAAQACAAIAAABuACwAAQABAAIAAABtACwAAQAAAAIAAABtACsAAQADAAAAAABsACsAAQABAAAAAABrACsAAQAAAAIAAABrACoAAQADAAEAAABrACkAAQAAAAEAAABrACgAAQADAAEAAABBAC4AAQACAAIAAABCAC4AAQABAAAAAABDAC4AAQABAAAAAABEAC8AAQAAAAEAAABEAC4AAQADAAAAAABEADAAAQADAAEAAABEADEAAQADAAEAAABEADIAAQADAAEAAABEADMAAQAAAAIAAABFADMAAQABAAIAAAA7AC8AAQABAAIAAAA6AC8AAQACAAAAAAA5AC8AAQACAAAAAAA4AC8AAQABAAAAAAA3AC8AAQABAAAAAAA2AC8AAQABAAAAAAA1AC8AAQACAAAAAAA0AC8AAQACAAAAAAAzAC8AAQACAAAAAAAyAC8AAQACAAAAAAAxAC8AAQABAAAAAAAwAC8AAQACAAAAAAAvAC8AAQABAAAAAAAuAC8AAQACAAAAAAAtAC8AAQACAAAAAAAsAC8AAQABAAAAAAArAC8AAQACAAAAAAAqAC8AAQABAAAAAAApAC8AAQABAAAAAAAoAC8AAQACAAAAAAAnAC8AAQACAAAAAAAmAC8AAQACAAIAAAAhAC4AAQADAAEAAAAhAC8AAQAAAAEAAAAhADAAAQAAAAEAAAAhADEAAQAAAAIAAAAiADEAAQADAAAAAAAiADIAAQAAAAIAAAAjADIAAQADAAAAAAAjADMAAQADAAEAAAAjADQAAQAAAAIAAAAkADQAAQABAAIAAAAtACEAAQACAAIAAAAuACEAAQABAAAAAAAvACEAAQACAAAAAAAwACEAAQABAAAAAAAxACEAAQADAAIAAAAxACAAAQAAAAAAAAAyACAAAQADAAIAAAAyAB8AAQADAAEAAAAyAB4AAQAAAAAAAAAzAB4AAQADAAIAAAA0AB4AAQABAAIAAAAzAB0AAQAAAAAAAAA0ABwAAQAAAAAAAAA1ABwAAQABAAIAAAA0AB0AAQADAAIAAAA3ABEAAQADAAEAAAA3ABAAAQAAAAEAAAA3AA8AAQAAAAEAAAA3AA4AAQAAAAEAAAA3AA0AAQAAAAAAAAA4AA0AAQACAAAAAAA5AA0AAQACAAAAAAA6AA0AAQABAAAAAAA7AA0AAQABAAAAAAA8AA0AAQABAAAAAAA9AA0AAQACAAAAAAA+AA0AAQACAAAAAAA/AA0AAQACAAAAAABAAA0AAQACAAAAAABBAA0AAQABAAIAAAA3ABIAAQADAAEAAAA3ABMAAQADAAIAAAA2ABMAAQACAAIAAABFAA8AAQACAAIAAABGAA8AAQABAAAAAABHAA8AAQADAAAAAABHABAAAQAAAAIAAABIABAAAQACAAAAAABJABAAAQABAAAAAABKABAAAQACAAAAAABLABAAAQACAAAAAABMABAAAQACAAAAAABNABAAAQADAAAAAABOABEAAQABAAIAAABNABEAAQAAAAIAAABNABYAAQABAAIAAABMABYAAQAAAAIAAABMABUAAQADAAAAAABLABUAAQACAAAAAABKABUAAQACAAAAAABJABUAAQAAAAIAAABJABQAAQADAAAAAABIABQAAQACAAIAAABSABYAAQADAAIAAABRABYAAQACAAIAAABSABUAAQAAAAAAAABTABUAAQACAAAAAABUABUAAQADAAIAAABUABQAAQAAAAAAAABVABQAAQABAAAAAABWABQAAQADAAIAAABWABMAAQAAAAAAAABXABMAAQABAAIAAAAyAAwAAQABAAAAAAAxAAwAAQAAAAIAAAAcADkAAQACAAIAAAAdADkAAQABAAAAAAAeADkAAQABAAAAAAAfADkAAQABAAAAAAAgADkAAQABAAAAAAAhADkAAQACAAAAAAAiADkAAQACAAAAAAAjADkAAQACAAAAAAAkADkAAQABAAAAAAAlADkAAQABAAAAAAAqADkAAQABAAIAAAAmADkAAQABAAIAAAApADkAAQACAAIAAAA=")
+tile_map_data = PackedByteArray("AABDACAAAQACAAIAAABEACAAAQACAAAAAABFACAAAQACAAAAAABGACAAAQADAAAAAABGACEAAQADAAEAAABGACIAAQADAAEAAABGACMAAQADAAIAAABFACMAAQABAAAAAABEACMAAQABAAAAAABDACMAAQAAAAIAAABDACIAAQADAAEAAAAcAB0AAQACAAIAAAAdAB0AAQACAAAAAAAeAB0AAQABAAIAAAAgAB0AAQACAAIAAAAhAB0AAQABAAAAAAAiAB0AAQABAAAAAAAjAB0AAQADAAIAAAAmAB0AAQAAAAIAAAAnAB0AAQABAAIAAAAqABsAAQACAAIAAAArABsAAQADAAIAAAArABoAAQAAAAAAAAAsABoAAQADAAIAAAAsABkAAQAAAAAAAAAtABkAAQABAAIAAAAvABgAAQACAAIAAAAwABgAAQADAAIAAAAwABcAAQADAAEAAAAwABYAAQAAAAAAAAAxABYAAQADAAIAAAAxABUAAQADAAEAAAAyABMAAQADAAIAAAAyABIAAQAAAAEAAAAzABEAAQADAAIAAAAzABAAAQAAAAEAAAAzAA0AAQADAAIAAAAzAAwAAQADAAAAAAAxAAsAAQADAAEAAAAxAAoAAQAAAAEAAAAdAAoAAQABAAIAAAAcAAoAAQACAAAAAAAbAAoAAQAAAAAAAAAbAAsAAQAAAAEAAAAbAAwAAQADAAEAAAAbAA0AAQAAAAEAAAAbAA4AAQAAAAEAAAAbAA8AAQAAAAIAAAAcAA8AAQABAAAAAAAdAA8AAQABAAIAAAAeABUAAQACAAIAAAAfABUAAQACAAAAAAAgABUAAQACAAAAAAAhABUAAQACAAAAAAAiABUAAQADAAIAAAAiABQAAQAAAAEAAAAlABMAAQACAAIAAAAmABMAAQADAAAAAAAmABQAAQAAAAIAAAAnABQAAQADAAIAAAAnABIAAQADAAEAAAAnABMAAQAAAAEAAAAmABoAAQADAAEAAAAmABsAAQAAAAEAAAAmABwAAQADAAEAAAAjABoAAQADAAEAAAAjABsAAQAAAAEAAAAjABwAAQAAAAEAAAAjABgAAQAAAAEAAAAjABkAAQAAAAEAAAAmABgAAQAAAAAAAAAmABkAAQAAAAEAAAAnABgAAQABAAIAAAAlAAkAAQABAAIAAAAkAAkAAQABAAAAAAAjAAkAAQAAAAAAAAAjAAoAAQADAAIAAAAiAAoAAQACAAIAAAAnAAoAAQAAAAEAAAAnAAsAAQADAAEAAAAnAAwAAQADAAIAAAAmAAwAAQABAAAAAAAlAAwAAQAAAAAAAAAlAA0AAQADAAIAAAAkAA0AAQACAAIAAAAqABAAAQAAAAEAAAAqABEAAQAAAAEAAAAqABIAAQADAAEAAAAqABMAAQADAAEAAAAqABQAAQADAAEAAAAqABUAAQAAAAEAAAAqABYAAQADAAIAAAApABYAAQABAAAAAAAoABYAAQACAAIAAABeACUAAQACAAIAAABfACUAAQACAAAAAABgACUAAQADAAAAAABgACYAAQAAAAEAAABgACcAAQADAAEAAABgACgAAQAAAAEAAABgACkAAQADAAIAAABfACkAAQACAAAAAABeACkAAQACAAAAAABdACkAAQACAAIAAABbACUAAQACAAIAAABcACUAAQABAAIAAABiACEAAQABAAIAAABhACEAAQAAAAAAAABhACIAAQADAAEAAABhACMAAQAAAAIAAABiACMAAQACAAAAAABjACMAAQACAAAAAABkACMAAQADAAIAAABgAAsAAQACAAIAAABhAAsAAQABAAAAAABiAAsAAQABAAAAAABjAAsAAQABAAAAAABkAAsAAQADAAIAAABkAAoAAQAAAAAAAABlAAoAAQACAAAAAABnAAoAAQADAAAAAABnAAsAAQAAAAIAAABoAAsAAQABAAAAAABpAAsAAQABAAIAAABmAAoAAQACAAAAAABrAAsAAQACAAIAAABsAAsAAQABAAAAAABtAAsAAQACAAAAAABuAAsAAQABAAAAAABvAAsAAQABAAAAAABwAAsAAQADAAAAAABwAAwAAQAAAAIAAABxAAwAAQABAAAAAAByAAwAAQADAAIAAAByAAsAAQAAAAAAAABzAAsAAQABAAAAAAB0AAsAAQADAAIAAAB0AAoAAQAAAAEAAAB0AAkAAQAAAAAAAAB1AAkAAQACAAAAAAB2AAkAAQABAAAAAAB3AAkAAQACAAAAAAB4AAkAAQACAAAAAAB5AAkAAQADAAAAAAB5AAoAAQADAAEAAAB5AAsAAQADAAEAAAB5AAwAAQADAAEAAAB5AA0AAQAAAAEAAAB5AA4AAQAAAAEAAAB5AA8AAQAAAAEAAAB5ABAAAQADAAIAAAB4ABAAAQAAAAAAAAB4ABEAAQADAAIAAAB3ABEAAQACAAAAAAB2ABEAAQACAAAAAAB1ABEAAQACAAIAAABoABYAAQABAAIAAABtACAAAQAAAAAAAABtACEAAQADAAEAAABtACIAAQADAAEAAABtACMAAQADAAIAAABuACAAAQABAAIAAAAaADwAAQACAAIAAAAbADwAAQABAAAAAAAcADwAAQACAAAAAAAdADwAAQADAAAAAAAdAD0AAQADAAEAAAAdAD4AAQAAAAEAAAAdAD8AAQAAAAEAAAAdAEAAAQADAAIAAAAcAEAAAQACAAIAAAAYADwAAQABAAIAAAAXADwAAQAAAAAAAAAXAD0AAQAAAAEAAAAXAD4AAQADAAEAAAAXAD8AAQADAAEAAAAXAEAAAQAAAAIAAAAYAEAAAQABAAIAAABCAEoAAQAAAAEAAABCAEsAAQAAAAEAAABCAEwAAQAAAAEAAABCAE0AAQADAAIAAAA+AEoAAQADAAEAAAA+AEsAAQADAAEAAAA+AEwAAQADAAEAAAA+AE0AAQADAAIAAACZAGIAAQADAAEAAACZAGMAAQAAAAIAAACaAGMAAQABAAAAAACbAGMAAQADAAAAAACbAGQAAQADAAEAAACbAGUAAQAAAAIAAACcAGUAAQADAAAAAACcAGYAAQAAAAIAAACdAGYAAQABAAAAAACeAGYAAQADAAAAAACeAGcAAQAAAAIAAACfAGcAAQACAAAAAACgAGcAAQABAAAAAAChAGcAAQADAAIAAAChAGYAAQAAAAAAAACiAGYAAQADAAIAAACiAGUAAQAAAAEAAACiAGQAAQADAAEAAACiAGMAAQADAAAAAAChAGMAAQAAAAIAAAChAGIAAQAAAAEAAAChAGEAAQADAAAAAACgAGEAAQABAAAAAACfAGEAAQABAAAAAACeAGEAAQAAAAIAAACeAGAAAQADAAAAAACdAGAAAQABAAAAAACcAGAAAQAAAAIAAACcAF8AAQADAAAAAACbAF8AAQACAAAAAACaAF8AAQACAAAAAACZAF8AAQAAAAAAAACZAGAAAQADAAEAAACZAGEAAQADAAEAAACdAHAAAQABAAAAAACeAHAAAQACAAAAAACfAHAAAQACAAAAAACgAHAAAQACAAAAAAChAHAAAQACAAAAAACiAHAAAQACAAAAAACjAHAAAQACAAAAAACkAHAAAQABAAAAAAClAHAAAQABAAIAAACcAHAAAQABAAAAAACbAHAAAQAAAAIAAACbAG8AAQADAAAAAACaAG8AAQACAAIAAACnAG0AAQABAAAAAACoAGwAAQAAAAEAAACoAGsAAQAAAAEAAACoAGoAAQADAAEAAACoAG0AAQADAAIAAACoAGkAAQADAAEAAACkAGkAAQADAAEAAACkAGoAAQADAAIAAACjAGoAAQAAAAAAAACjAGsAAQADAAIAAACiAGsAAQACAAIAAACkAGgAAQADAAEAAACoAF4AAQABAAIAAACnAF4AAQAAAAIAAACnAF0AAQADAAAAAACmAF0AAQACAAAAAAClAF0AAQAAAAIAAAClAFwAAQADAAAAAACkAFwAAQACAAIAAACcAFEAAQADAAEAAACcAFIAAQAAAAEAAACcAFMAAQAAAAEAAACcAFQAAQADAAEAAACcAFUAAQAAAAEAAACcAFYAAQAAAAEAAACcAFcAAQAAAAEAAACcAFgAAQADAAEAAACcAFkAAQAAAAIAAACdAFkAAQABAAIAAACYAFMAAQADAAAAAACYAFQAAQAAAAEAAACYAFUAAQADAAEAAACXAFMAAQAAAAIAAACXAFIAAQADAAAAAACWAFIAAQAAAAIAAACWAFEAAQADAAAAAACVAFEAAQACAAAAAACUAFEAAQAAAAIAAACUAFAAAQADAAEAAACUAE8AAQADAAAAAACTAE8AAQABAAAAAACSAE8AAQAAAAIAAACSAE4AAQADAAAAAACRAE4AAQACAAIAAACDAEQAAQACAAIAAACEAEQAAQACAAAAAACFAEQAAQACAAAAAACGAEQAAQABAAAAAACHAEQAAQABAAAAAACIAEQAAQADAAAAAACIAEUAAQAAAAIAAACJAEUAAQABAAAAAACKAEUAAQADAAAAAACKAEYAAQAAAAIAAACLAEYAAQABAAIAAAB+AEYAAQABAAIAAAB9AEYAAQACAAAAAAB8AEYAAQAAAAIAAAB8AEUAAQADAAAAAAB7AEUAAQACAAAAAAB6AEUAAQABAAAAAAB5AEUAAQACAAAAAAB4AEUAAQAAAAIAAAB4AEQAAQADAAEAAAB4AEMAAQADAAAAAAB3AEMAAQAAAAIAAAB3AEIAAQADAAAAAAB2AEIAAQACAAAAAAB1AEIAAQABAAAAAAB0AEIAAQAAAAAAAAB0AEMAAQADAAIAAABzAEMAAQAAAAAAAAByAEQAAQACAAAAAABxAEQAAQABAAAAAABwAEQAAQACAAAAAABvAEQAAQABAAAAAABuAEQAAQABAAAAAABtAEQAAQAAAAAAAABzAEQAAQADAAIAAABtAEUAAQADAAIAAABsAEUAAQACAAAAAABrAEUAAQABAAAAAABqAEUAAQACAAIAAABJAEAAAQAAAAEAAABJAEEAAQAAAAIAAABKAEEAAQADAAAAAABKAEIAAQAAAAIAAABLAEIAAQADAAAAAABLAEMAAQAAAAIAAABMAEMAAQADAAAAAABNAEQAAQADAAAAAABMAEQAAQAAAAIAAABNAEUAAQAAAAIAAABOAEUAAQADAAAAAABOAEYAAQAAAAIAAABPAEYAAQADAAAAAABPAEcAAQAAAAIAAABbAEMAAQACAAIAAABcAEMAAQACAAAAAABdAEMAAQACAAAAAABeAEMAAQABAAAAAABfAEMAAQABAAAAAABgAEMAAQACAAAAAABhAEMAAQABAAAAAABiAEMAAQACAAAAAABjAEMAAQABAAIAAAB2ADEAAQACAAIAAAB3ADEAAQADAAAAAAB3ADIAAQADAAEAAAB3ADMAAQADAAEAAAB3ADQAAQAAAAEAAAB3ADUAAQADAAEAAAB3ADYAAQADAAEAAAB3ADcAAQAAAAEAAAB3ADgAAQAAAAEAAAB3ADkAAQAAAAEAAAB3ADoAAQAAAAEAAAB3ADsAAQADAAEAAAB3ADwAAQAAAAIAAAB4ADwAAQABAAIAAABxADEAAQADAAAAAABxADIAAQAAAAIAAAByADIAAQADAAAAAAByADMAAQAAAAIAAABzADMAAQABAAIAAABwADEAAQACAAIAAABuACwAAQABAAIAAABtACwAAQAAAAIAAABtACsAAQADAAAAAABsACsAAQABAAAAAABrACsAAQAAAAIAAABrACoAAQADAAEAAABrACkAAQAAAAEAAABrACgAAQADAAEAAABBAC4AAQACAAIAAABCAC4AAQABAAAAAABDAC4AAQABAAAAAABEAC8AAQAAAAEAAABEAC4AAQADAAAAAABEADAAAQADAAEAAABEADEAAQADAAEAAABEADIAAQADAAEAAABEADMAAQAAAAIAAABFADMAAQABAAIAAAA7AC8AAQABAAIAAAA6AC8AAQACAAAAAAA5AC8AAQACAAAAAAA4AC8AAQABAAAAAAA3AC8AAQABAAAAAAA2AC8AAQABAAAAAAA1AC8AAQACAAAAAAA0AC8AAQACAAAAAAAzAC8AAQACAAAAAAAyAC8AAQACAAAAAAAxAC8AAQABAAAAAAAwAC8AAQACAAAAAAAvAC8AAQABAAAAAAAuAC8AAQACAAAAAAAtAC8AAQACAAAAAAAsAC8AAQABAAAAAAArAC8AAQACAAAAAAAqAC8AAQABAAAAAAApAC8AAQABAAAAAAAoAC8AAQACAAAAAAAnAC8AAQACAAAAAAAmAC8AAQACAAIAAAAhAC4AAQADAAEAAAAhAC8AAQAAAAEAAAAhADAAAQAAAAEAAAAhADEAAQAAAAIAAAAiADEAAQADAAAAAAAiADIAAQAAAAIAAAAjADIAAQADAAAAAAAjADMAAQADAAEAAAAjADQAAQAAAAIAAAAkADQAAQABAAIAAAAtACEAAQACAAIAAAAuACEAAQABAAAAAAAvACEAAQACAAAAAAAwACEAAQABAAAAAAAxACEAAQADAAIAAAAxACAAAQAAAAAAAAAyACAAAQADAAIAAAAyAB8AAQADAAEAAAAyAB4AAQAAAAAAAAAzAB4AAQADAAIAAAA0AB4AAQABAAIAAAAzAB0AAQAAAAAAAAA0ABwAAQAAAAAAAAA1ABwAAQABAAIAAAA0AB0AAQADAAIAAAA3ABEAAQADAAEAAAA3ABAAAQAAAAEAAAA3AA8AAQAAAAEAAAA3AA4AAQAAAAEAAAA3AA0AAQAAAAAAAAA4AA0AAQACAAAAAAA5AA0AAQACAAAAAAA6AA0AAQABAAAAAAA7AA0AAQABAAAAAAA8AA0AAQABAAAAAAA9AA0AAQACAAAAAAA+AA0AAQACAAAAAAA/AA0AAQACAAAAAABAAA0AAQACAAAAAABBAA0AAQABAAIAAAA3ABIAAQADAAEAAAA3ABMAAQADAAIAAAA2ABMAAQACAAIAAABFAA8AAQACAAIAAABGAA8AAQABAAAAAABHAA8AAQADAAAAAABHABAAAQAAAAIAAABIABAAAQACAAAAAABJABAAAQABAAAAAABKABAAAQACAAAAAABLABAAAQACAAAAAABMABAAAQACAAAAAABNABAAAQADAAAAAABOABEAAQABAAIAAABNABEAAQAAAAIAAABNABYAAQABAAIAAABMABYAAQAAAAIAAABMABUAAQADAAAAAABLABUAAQACAAAAAABKABUAAQACAAAAAABJABUAAQAAAAIAAABJABQAAQADAAAAAABIABQAAQACAAIAAABSABYAAQADAAIAAABRABYAAQACAAIAAABSABUAAQAAAAAAAABTABUAAQACAAAAAABUABUAAQADAAIAAABUABQAAQAAAAAAAABVABQAAQABAAAAAABWABQAAQADAAIAAABWABMAAQAAAAAAAABXABMAAQABAAIAAAAyAAwAAQABAAAAAAAxAAwAAQAAAAIAAAAcADkAAQACAAIAAAAdADkAAQABAAAAAAAeADkAAQABAAAAAAAfADkAAQABAAAAAAAgADkAAQABAAAAAAAhADkAAQACAAAAAAAiADkAAQACAAAAAAAjADkAAQACAAAAAAAkADkAAQABAAAAAAAlADkAAQABAAAAAAAqADkAAQABAAIAAAAmADkAAQABAAAAAAApADkAAQABAAAAAAAnADkAAQABAAAAAAAoADkAAQABAAAAAAAqAEoAAQACAAIAAAArAEoAAQADAAAAAAArAEsAAQADAAEAAAArAEwAAQADAAIAAAAqAEwAAQABAAAAAAApAEwAAQABAAAAAAAoAEwAAQACAAAAAAAnAEwAAQACAAAAAAAmAEwAAQABAAAAAAAlAEwAAQAAAAIAAAAlAEsAAQAAAAEAAAAlAEoAAQADAAEAAAA=")
 tile_set = SubResource("TileSet_8u5fy")
 
 [node name="Plateau" type="TileMapLayer" parent="mapa1" unique_id=1894287106]
@@ -2075,6 +2076,16 @@ texture = ExtResource("24_y8e7j")
 position = Vector2(-1.5, 21.75)
 shape = SubResource("RectangleShape2D_16kg6")
 
+[node name="StaticBody2D5" type="StaticBody2D" parent="Construcoes" unique_id=844871935]
+position = Vector2(2674, 4737)
+
+[node name="Sprite2D" type="Sprite2D" parent="Construcoes/StaticBody2D5" unique_id=834951898]
+texture = ExtResource("24_y8e7j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Construcoes/StaticBody2D5" unique_id=1510952265]
+position = Vector2(-1.5, 21.75)
+shape = SubResource("RectangleShape2D_16kg6")
+
 [node name="StaticBody2D2" type="StaticBody2D" parent="Construcoes" unique_id=1194520982]
 position = Vector2(6082, 1758)
 
@@ -2229,6 +2240,7 @@ lista_direcoes = Array[Vector2]([Vector2(3140, 3118), Vector2(2987, 3064), Vecto
 
 [node name="ovelha10" parent="Construcoes" unique_id=546234477 instance=ExtResource("29_16kg6")]
 position = Vector2(3845, 3431)
+animation = &"idle"
 flip_h = true
 lista_direcoes = Array[Vector2]([Vector2(3845, 3431), Vector2(3893, 3537), Vector2(3727, 3469)])
 
@@ -2856,10 +2868,11 @@ codigoItem = "missao2"
 
 [node name="bau3" parent="Construcoes" unique_id=1505520067 instance=ExtResource("38_4k4qq")]
 position = Vector2(7416, 789)
+codigoItem = "missao3"
 
 [node name="Player" parent="." unique_id=1871521187 instance=ExtResource("9_41n40")]
 y_sort_enabled = true
-position = Vector2(10075, 5529)
+position = Vector2(2515, 4837)
 next_level = "res://scenes/maps/mapa_2.tscn"
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1034971327]
@@ -2868,12 +2881,24 @@ y_sort_enabled = true
 [node name="Aranha" parent="Enemies" unique_id=124851119 groups=["enemies"] instance=ExtResource("15_c15pj")]
 position = Vector2(3515, 4246)
 
+[node name="NavigationAgent2D" parent="Enemies/Aranha" index="1" unique_id=830379054]
+debug_enabled = true
+
+[node name="CollisionShape2D" parent="Enemies/Aranha" index="2" unique_id=2025509994]
+shape = SubResource("CircleShape2D_1urg7")
+
 [node name="AnimationPlayer" parent="Enemies/Aranha" index="6" unique_id=1960030264]
 autoplay = &"idle"
 
 [node name="aranhaFilha" parent="Enemies" unique_id=429662647 groups=["enemies"] instance=ExtResource("15_c15pj")]
 position = Vector2(3499, 4324)
 scale = Vector2(0.5, 0.5)
+
+[node name="NavigationAgent2D" parent="Enemies/aranhaFilha" index="1" unique_id=830379054]
+debug_enabled = true
+
+[node name="CollisionShape2D" parent="Enemies/aranhaFilha" index="2" unique_id=2025509994]
+shape = SubResource("CircleShape2D_1urg7")
 
 [node name="AnimationPlayer" parent="Enemies/aranhaFilha" index="6" unique_id=1960030264]
 autoplay = &"idle"
@@ -2882,12 +2907,21 @@ autoplay = &"idle"
 position = Vector2(3431, 4256)
 scale = Vector2(0.5, 0.5)
 
+[node name="NavigationAgent2D" parent="Enemies/aranhaFilha2" index="1" unique_id=830379054]
+debug_enabled = true
+
+[node name="CollisionShape2D" parent="Enemies/aranhaFilha2" index="2" unique_id=2025509994]
+shape = SubResource("CircleShape2D_1urg7")
+
 [node name="AnimationPlayer" parent="Enemies/aranhaFilha2" index="6" unique_id=1960030264]
 autoplay = &"idle"
 
 [node name="ursoFilho" parent="Enemies" unique_id=462573676 groups=["enemies"] instance=ExtResource("15_348lo")]
 position = Vector2(9141, 5689)
 scale = Vector2(0.5, 0.5)
+
+[node name="NavigationAgent2D" parent="Enemies/ursoFilho" index="1" unique_id=830379054]
+debug_enabled = true
 
 [node name="AnimationPlayer" parent="Enemies/ursoFilho" index="6" unique_id=1885589877]
 autoplay = &"idle"
@@ -2896,11 +2930,17 @@ autoplay = &"idle"
 position = Vector2(9268, 5702)
 scale = Vector2(0.5, 0.5)
 
+[node name="NavigationAgent2D" parent="Enemies/ursoFilho2" index="1" unique_id=830379054]
+debug_enabled = true
+
 [node name="AnimationPlayer" parent="Enemies/ursoFilho2" index="6" unique_id=1885589877]
 autoplay = &"idle"
 
 [node name="urso" parent="Enemies" unique_id=1542823841 groups=["enemies"] instance=ExtResource("15_348lo")]
 position = Vector2(9219, 5606)
+
+[node name="NavigationAgent2D" parent="Enemies/urso" index="1" unique_id=830379054]
+debug_enabled = true
 
 [node name="AnimationPlayer" parent="Enemies/urso" index="6" unique_id=1885589877]
 autoplay = &"idle"
@@ -2926,8 +2966,8 @@ position = Vector2(6002, 870)
 [node name="Sprite2D" parent="Enemies/goblinTocha6" index="0" unique_id=1224044581]
 flip_h = true
 
-[node name="CollisionShape2D" parent="Enemies/goblinTocha6/hitBox" parent_id_path=PackedInt32Array(985372177, 1005801795) index="0" unique_id=570683609]
-shape = SubResource("RectangleShape2D_soblo")
+[node name="NavigationAgent2D" parent="Enemies/goblinTocha6" index="1" unique_id=830379054]
+debug_enabled = true
 
 [node name="goblinTocha7" parent="Enemies" unique_id=1704063470 groups=["enemies"] instance=ExtResource("42_evh1l")]
 position = Vector2(7167, 1691)
@@ -2935,8 +2975,8 @@ position = Vector2(7167, 1691)
 [node name="Sprite2D" parent="Enemies/goblinTocha7" index="0" unique_id=1224044581]
 flip_h = true
 
-[node name="CollisionShape2D" parent="Enemies/goblinTocha7/hitBox" parent_id_path=PackedInt32Array(1704063470, 1005801795) index="0" unique_id=570683609]
-shape = SubResource("RectangleShape2D_soblo")
+[node name="NavigationAgent2D" parent="Enemies/goblinTocha7" index="1" unique_id=830379054]
+debug_enabled = true
 
 [node name="guerreiroDour" parent="Enemies" unique_id=941154047 groups=["enemies"] instance=ExtResource("44_d11q5")]
 position = Vector2(1972, 819)
@@ -2961,8 +3001,11 @@ death_packed = ExtResource("45_to701")
 [node name="Sprite2D" parent="Enemies/guerreiroDour4" index="0" unique_id=1224044581]
 flip_h = true
 
-[node name="CollisionShape2D" parent="Enemies/guerreiroDour4/hitBox" parent_id_path=PackedInt32Array(811530400, 1005801795) index="0" unique_id=570683609]
-shape = SubResource("RectangleShape2D_qyq86")
+[node name="NavigationAgent2D" parent="Enemies/guerreiroDour4" index="1" unique_id=830379054]
+debug_enabled = true
+
+[node name="CollisionShape2D" parent="Enemies/guerreiroDour4" index="2" unique_id=2025509994]
+shape = SubResource("CircleShape2D_1urg7")
 
 [node name="guerreiroDour5" parent="Enemies" unique_id=550109733 groups=["enemies"] instance=ExtResource("44_d11q5")]
 position = Vector2(2420, 959)
@@ -2971,8 +3014,11 @@ death_packed = ExtResource("45_to701")
 [node name="Sprite2D" parent="Enemies/guerreiroDour5" index="0" unique_id=1224044581]
 flip_h = true
 
-[node name="CollisionShape2D" parent="Enemies/guerreiroDour5/hitBox" parent_id_path=PackedInt32Array(550109733, 1005801795) index="0" unique_id=570683609]
-shape = SubResource("RectangleShape2D_qyq86")
+[node name="NavigationAgent2D" parent="Enemies/guerreiroDour5" index="1" unique_id=830379054]
+debug_enabled = true
+
+[node name="CollisionShape2D" parent="Enemies/guerreiroDour5" index="2" unique_id=2025509994]
+shape = SubResource("CircleShape2D_1urg7")
 
 [node name="goblinTocha8" parent="Enemies" unique_id=1096899376 groups=["enemies"] instance=ExtResource("42_evh1l")]
 position = Vector2(3994, 2340)
@@ -2983,8 +3029,8 @@ position = Vector2(4379, 2357)
 [node name="Sprite2D" parent="Enemies/goblinTocha9" index="0" unique_id=1224044581]
 flip_h = true
 
-[node name="CollisionShape2D" parent="Enemies/goblinTocha9/hitBox" parent_id_path=PackedInt32Array(1157702274, 1005801795) index="0" unique_id=570683609]
-shape = SubResource("RectangleShape2D_soblo")
+[node name="NavigationAgent2D" parent="Enemies/goblinTocha9" index="1" unique_id=830379054]
+debug_enabled = true
 
 [node name="goblinTocha10" parent="Enemies" unique_id=946080328 groups=["enemies"] instance=ExtResource("42_evh1l")]
 position = Vector2(6398, 1830)
@@ -2995,11 +3041,17 @@ position = Vector2(6946, 2005)
 [node name="Sprite2D" parent="Enemies/goblinTocha11" index="0" unique_id=1224044581]
 flip_h = true
 
-[node name="CollisionShape2D" parent="Enemies/goblinTocha11/hitBox" parent_id_path=PackedInt32Array(816793435, 1005801795) index="0" unique_id=570683609]
-shape = SubResource("RectangleShape2D_soblo")
+[node name="NavigationAgent2D" parent="Enemies/goblinTocha11" index="1" unique_id=830379054]
+debug_enabled = true
 
 [node name="aranhaMae" parent="Enemies" unique_id=1030194404 groups=["enemies"] instance=ExtResource("15_c15pj")]
 position = Vector2(6806, 3736)
+
+[node name="NavigationAgent2D" parent="Enemies/aranhaMae" index="1" unique_id=830379054]
+debug_enabled = true
+
+[node name="CollisionShape2D" parent="Enemies/aranhaMae" index="2" unique_id=2025509994]
+shape = SubResource("CircleShape2D_1urg7")
 
 [node name="AnimationPlayer" parent="Enemies/aranhaMae" index="6" unique_id=1960030264]
 autoplay = &"idle"
@@ -3008,12 +3060,24 @@ autoplay = &"idle"
 position = Vector2(6737, 3668)
 scale = Vector2(0.5, 0.5)
 
+[node name="NavigationAgent2D" parent="Enemies/aranhaFilha3" index="1" unique_id=830379054]
+debug_enabled = true
+
+[node name="CollisionShape2D" parent="Enemies/aranhaFilha3" index="2" unique_id=2025509994]
+shape = SubResource("CircleShape2D_1urg7")
+
 [node name="AnimationPlayer" parent="Enemies/aranhaFilha3" index="6" unique_id=1960030264]
 autoplay = &"idle"
 
 [node name="aranhaFilha4" parent="Enemies" unique_id=109338552 groups=["enemies"] instance=ExtResource("15_c15pj")]
 position = Vector2(6717, 3745)
 scale = Vector2(0.5, 0.5)
+
+[node name="NavigationAgent2D" parent="Enemies/aranhaFilha4" index="1" unique_id=830379054]
+debug_enabled = true
+
+[node name="CollisionShape2D" parent="Enemies/aranhaFilha4" index="2" unique_id=2025509994]
+shape = SubResource("CircleShape2D_1urg7")
 
 [node name="AnimationPlayer" parent="Enemies/aranhaFilha4" index="6" unique_id=1960030264]
 autoplay = &"idle"
@@ -3025,6 +3089,9 @@ scale = Vector2(0.5, 0.5)
 [node name="Sprite2D" parent="Enemies/urso2" index="0" unique_id=1224044581]
 flip_h = true
 
+[node name="NavigationAgent2D" parent="Enemies/urso2" index="1" unique_id=830379054]
+debug_enabled = true
+
 [node name="AnimationPlayer" parent="Enemies/urso2" index="6" unique_id=1885589877]
 autoplay = &"idle"
 
@@ -3035,6 +3102,9 @@ scale = Vector2(0.5, 0.5)
 [node name="Sprite2D" parent="Enemies/ursoFilho3" index="0" unique_id=1224044581]
 flip_h = true
 
+[node name="NavigationAgent2D" parent="Enemies/ursoFilho3" index="1" unique_id=830379054]
+debug_enabled = true
+
 [node name="AnimationPlayer" parent="Enemies/ursoFilho3" index="6" unique_id=1885589877]
 autoplay = &"idle"
 
@@ -3043,6 +3113,9 @@ position = Vector2(8097, 2323)
 
 [node name="Sprite2D" parent="Enemies/ursoFilho4" index="0" unique_id=1224044581]
 flip_h = true
+
+[node name="NavigationAgent2D" parent="Enemies/ursoFilho4" index="1" unique_id=830379054]
+debug_enabled = true
 
 [node name="AnimationPlayer" parent="Enemies/ursoFilho4" index="6" unique_id=1885589877]
 autoplay = &"idle"
@@ -3054,11 +3127,15 @@ scale = Vector2(0.5, 0.5)
 [node name="Sprite2D" parent="Enemies/ursoFilho5" index="0" unique_id=1224044581]
 flip_h = true
 
+[node name="NavigationAgent2D" parent="Enemies/ursoFilho5" index="1" unique_id=830379054]
+debug_enabled = true
+
 [node name="AnimationPlayer" parent="Enemies/ursoFilho5" index="6" unique_id=1885589877]
 autoplay = &"idle"
 
 [node name="guerDoura" parent="Enemies" unique_id=1678817625 groups=["enemies"] instance=ExtResource("44_d11q5")]
 position = Vector2(1511, 4365)
+exp_reward = 500
 death_packed = ExtResource("45_to701")
 
 [node name="cobra" parent="Enemies" unique_id=1796881576 groups=["enemies"] instance=ExtResource("45_qyq86")]
@@ -3091,11 +3168,21 @@ position = Vector2(9757, 6554)
 [node name="AnimatedSprite2D" parent="StaticBody2D" index="0" unique_id=1428731640]
 frame_progress = 0.9977101
 
+[node name="CollisionShape2D" parent="StaticBody2D/Area2D" parent_id_path=PackedInt32Array(1447522997, 1091155857) index="0" unique_id=776355338]
+disabled = true
+
 [node name="UI" type="CanvasLayer" parent="." unique_id=1076381030]
 
-[node name="Sprite2D" type="Sprite2D" parent="UI" unique_id=1540835646]
+[node name="bussola" type="Button" parent="UI" unique_id=434482638]
+offset_left = 103.0
+offset_top = 544.0
+offset_right = 178.0
+offset_bottom = 619.0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/bussola" unique_id=29304129]
 visible = false
-position = Vector2(145, 568)
+position = Vector2(35, 35)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("44_gsl2b")
 
@@ -3173,7 +3260,7 @@ vertical_alignment = 1
 offset_left = 1045.0
 offset_top = 14.0
 offset_right = 1268.0
-offset_bottom = 251.0
+offset_bottom = 166.0
 texture = ExtResource("50_4tp5c")
 patch_margin_left = 64
 patch_margin_top = 64
@@ -3191,7 +3278,7 @@ anchor_bottom = 1.0
 offset_left = 15.0
 offset_top = 18.0
 offset_right = -15.0
-offset_bottom = -15.0
+offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -3226,10 +3313,19 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="UI/missoes/VBoxContainer/missao1" unique_id=1315438163]
 layout_mode = 2
-text = "missão 1 "
+text = "A descoberta"
 label_settings = SubResource("LabelSettings_to701")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="missao1" type="Button" parent="UI/missoes/VBoxContainer/missao1/Label" unique_id=1748003765]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="missao2" type="HBoxContainer" parent="UI/missoes/VBoxContainer" unique_id=1984481754]
 layout_mode = 2
@@ -3262,15 +3358,228 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="UI/missoes/VBoxContainer/missao2" unique_id=526912513]
 layout_mode = 2
-text = "missão 1 "
+text = "O Chamado do Norte"
 label_settings = SubResource("LabelSettings_to701")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="missao2" type="Button" parent="UI/missoes/VBoxContainer/missao2/Label" unique_id=1871569009]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="missao3" type="HBoxContainer" parent="UI/missoes/VBoxContainer" unique_id=500879025]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/missoes/VBoxContainer/missao3" unique_id=337545819]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("48_x5qpe")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="UI/missoes/VBoxContainer/missao3/TextureRect" unique_id=1143224315]
+visible = false
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("52_d11q5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI/missoes/VBoxContainer/missao3" unique_id=1025702793]
+layout_mode = 2
+text = "As Cinzas do Leste"
+label_settings = SubResource("LabelSettings_to701")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="missao3" type="Button" parent="UI/missoes/VBoxContainer/missao3/Label" unique_id=1682194402]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="missao4" type="HBoxContainer" parent="UI/missoes/VBoxContainer" unique_id=1481480474]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UI/missoes/VBoxContainer/missao4" unique_id=470733330]
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("48_x5qpe")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="UI/missoes/VBoxContainer/missao4/TextureRect" unique_id=1020824706]
+visible = false
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("52_d11q5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI/missoes/VBoxContainer/missao4" unique_id=888084848]
+layout_mode = 2
+text = "Portal Escarlate"
+label_settings = SubResource("LabelSettings_to701")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="missao4" type="Button" parent="UI/missoes/VBoxContainer/missao4/Label" unique_id=386188610]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="descricao" type="ColorRect" parent="UI" unique_id=748388666]
+visible = false
+custom_minimum_size = Vector2(200, 300)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -250.0
+offset_right = 150.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 0.3764706)
+
+[node name="mascara" type="ColorRect" parent="UI/descricao" unique_id=1404458254]
+show_behind_parent = true
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 0.3764706)
+
+[node name="Label" type="Label" parent="UI/descricao" unique_id=1859540132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 11
+autowrap_mode = 1
+
+[node name="fechar" type="Button" parent="UI/descricao" unique_id=1429256748]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -37.0
+offset_right = 31.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Fechar"
+
+[node name="dialogo" type="ColorRect" parent="UI" unique_id=1053504163]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -630.0
+offset_top = -150.0
+offset_right = 630.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.50980395)
+script = ExtResource("57_u1iih")
+
+[node name="mascara" type="ColorRect" parent="UI/dialogo" unique_id=1081158525]
+show_behind_parent = true
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -640.0
+offset_right = 640.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 0.3764706)
+
+[node name="TextureRect" type="TextureRect" parent="UI/dialogo" unique_id=677447581]
+layout_mode = 0
+offset_top = -116.0
+offset_right = 256.0
+offset_bottom = 140.0
+texture = ExtResource("57_buf8l")
+
+[node name="Label" type="Label" parent="UI/dialogo" unique_id=469010873]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 12.0
+offset_right = 1249.0
+offset_bottom = 129.0
+text = "aluehflaiuebfliahjb lvkhabl hajb lvab ldak"
+autowrap_mode = 1
 
 [node name="GameScene" parent="." unique_id=969639682 instance=ExtResource("31_wot31")]
 
 [connection signal="desbloquearBau" from="Construcoes/bau" to="UI/missoes" method="_on_bau_desbloquear_bau"]
 [connection signal="desbloquearBau" from="Construcoes/bau2" to="UI/missoes" method="_on_bau_desbloquear_bau"]
+[connection signal="desbloquearBau" from="Construcoes/bau3" to="UI/missoes" method="_on_bau_desbloquear_bau"]
 [connection signal="update_hp_bar" from="Player" to="UI/HUD" method="_on_player_update_hp_bar"]
 [connection signal="died" from="Enemies/Aranha" to="GameScene" method="enemy_died"]
 [connection signal="died" from="Enemies/aranhaFilha" to="GameScene" method="enemy_died"]
@@ -3309,6 +3618,12 @@ vertical_alignment = 1
 [connection signal="died" from="Enemies/cobra3" to="GameScene" method="enemy_died"]
 [connection signal="died" from="Enemies/cobra4" to="GameScene" method="enemy_died"]
 [connection signal="body_entered" from="StaticBody2D/Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="pressed" from="UI/bussola" to="UI/missoes" method="_on_bussola_pressed"]
+[connection signal="pressed" from="UI/missoes/VBoxContainer/missao1/Label/missao1" to="UI/missoes" method="_on_missao_1_pressed"]
+[connection signal="pressed" from="UI/missoes/VBoxContainer/missao2/Label/missao2" to="UI/missoes" method="_on_missao_2_pressed"]
+[connection signal="pressed" from="UI/missoes/VBoxContainer/missao3/Label/missao3" to="UI/missoes" method="_on_missao_3_pressed"]
+[connection signal="pressed" from="UI/missoes/VBoxContainer/missao4/Label/missao4" to="UI/missoes" method="_on_missao_4_pressed"]
+[connection signal="pressed" from="UI/descricao/fechar" to="UI/missoes" method="_on_fechar_pressed"]
 
 [editable path="Enemies/Aranha"]
 [editable path="Enemies/aranhaFilha"]

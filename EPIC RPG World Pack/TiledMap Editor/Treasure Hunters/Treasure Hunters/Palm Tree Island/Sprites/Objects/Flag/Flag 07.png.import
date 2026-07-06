@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1rvv715b168c"
-path="res://.godot/imported/Flag 07.png-3434acd4c229bd28457e8f9594bf898b.ctex"
+path="res://.godot/imported/Flag 07.png-609893f763a4de0e940e1111a6119768.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 07.png"
-dest_files=["res://.godot/imported/Flag 07.png-3434acd4c229bd28457e8f9594bf898b.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 07.png"
+dest_files=["res://.godot/imported/Flag 07.png-609893f763a4de0e940e1111a6119768.ctex"]
 
 [params]
 

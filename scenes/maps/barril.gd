@@ -14,9 +14,8 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		var explosao = load("res://explosao_barril.tscn").instantiate()
 		get_tree().root.add_child(explosao)
 		explosao.global_position = global_position + Vector2(randi_range(-86,86),randi_range(-86,86)) + Vector2(0,128)
-	var music = load("res://assets/audio/music/explosaoBarril.mp3")
-	$AudioStreamPlayer.stream = music
-	$AudioStreamPlayer.play()
+	var music = load("res://scenes/maps/barrilExplosao.tscn").instantiate()
+	get_tree().root.call_deferred("add_child", music)
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	queue_free()

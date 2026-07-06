@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnppumc0bb57y"
-path="res://.godot/imported/Run 05.png-cc71c17b8875bbd2eed310b343ef9731.ctex"
+path="res://.godot/imported/Run 05.png-a98e24089f65a02dc1457363c66d1b6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 05.png"
-dest_files=["res://.godot/imported/Run 05.png-cc71c17b8875bbd2eed310b343ef9731.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 05.png"
+dest_files=["res://.godot/imported/Run 05.png-a98e24089f65a02dc1457363c66d1b6f.ctex"]
 
 [params]
 

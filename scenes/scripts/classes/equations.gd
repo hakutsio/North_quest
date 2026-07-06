@@ -3,6 +3,11 @@ extends Node
 
 const BASE_ATTACK_SPEED: float = 0.6
 
+const MAX_LEVEL := 10
+const MAX_MULTIPLIER := 2.0
+
+static func get_level_multiplier() -> float:
+	return 1.0 + float(PlayerData.level - 1) / (MAX_LEVEL - 1)
+
 static func calculate_attack_speed() -> float:
-	var attack_speed: float = BASE_ATTACK_SPEED * (1 - 0.45 * (PlayerData.level - 1))
-	return attack_speed 
+	return BASE_ATTACK_SPEED / get_level_multiplier()

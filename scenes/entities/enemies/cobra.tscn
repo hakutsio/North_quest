@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://bs3cond6skmpx" path="res://Tiny Swords (Free Pack)/Tiny Swords (Enemy Pack) (3)/Tiny Swords (Enemy Pack)/Enemy Pack/Enemies/Caveborn/Snake/Snake_Attack.png" id="3_81uh1"]
 [ext_resource type="Texture2D" uid="uid://c7ekpisim6eei" path="res://Tiny Swords (Free Pack)/Tiny Swords (Enemy Pack) (3)/Tiny Swords (Enemy Pack)/Enemy Pack/Enemies/Caveborn/Snake/Snake_Run.png" id="3_jfx0r"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_cagcx"]
+radius = 31.016125
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_81uh1"]
 radius = 41.677334
 
@@ -373,9 +376,8 @@ _data = {
 texture = ExtResource("2_jfx0r")
 hframes = 8
 
-[node name="CollisionShape2D" parent="hurtBox" parent_id_path=PackedInt32Array(1160843126) index="0" unique_id=1532269988]
-position = Vector2(1.0000002, -0.9999981)
-rotation = 1.4887658
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox" parent_id_path=PackedInt32Array(1160843126) index="0" unique_id=469705970]
+shape = SubResource("CircleShape2D_cagcx")
 
 [node name="CollisionShape2D" parent="hitBox" parent_id_path=PackedInt32Array(1005801795) index="0" unique_id=570683609]
 position = Vector2(-24.511864, 52.56585)

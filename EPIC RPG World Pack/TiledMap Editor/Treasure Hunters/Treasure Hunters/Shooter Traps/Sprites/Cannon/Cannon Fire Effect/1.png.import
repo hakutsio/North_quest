@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdrw84a8ffoig"
-path="res://.godot/imported/1.png-ba08c6baf3a9af3169ea7f724c6ea840.ctex"
+path="res://.godot/imported/1.png-9b542a53b543627d147a0545c3d3b695.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Fire Effect/1.png"
-dest_files=["res://.godot/imported/1.png-ba08c6baf3a9af3169ea7f724c6ea840.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Fire Effect/1.png"
+dest_files=["res://.godot/imported/1.png-9b542a53b543627d147a0545c3d3b695.ctex"]
 
 [params]
 

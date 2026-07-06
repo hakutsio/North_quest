@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnrxaabg7lo5s"
-path="res://.godot/imported/NPC Merchant-icons-sword.png-d7030ac73fbc973718ec864bfaff0aab.ctex"
+path="res://.godot/imported/NPC Merchant-icons-sword.png-37c9633e6abd0fc3eff488377481de89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/Characters/NPC Merchant-icons-sword.png"
-dest_files=["res://.godot/imported/NPC Merchant-icons-sword.png-d7030ac73fbc973718ec864bfaff0aab.ctex"]
+source_file="res://EPIC RPG World Pack/Characters/NPC Merchant-icons-sword.png"
+dest_files=["res://.godot/imported/NPC Merchant-icons-sword.png-37c9633e6abd0fc3eff488377481de89.ctex"]
 
 [params]
 

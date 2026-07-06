@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cydlcidhyyonc"
-path="res://.godot/imported/5.png-0138f2c20c1ac6a18345934df44256cd.ctex"
+path="res://.godot/imported/5.png-68329d2745cb2321de2fab2f176f9522.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/5.png"
-dest_files=["res://.godot/imported/5.png-0138f2c20c1ac6a18345934df44256cd.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/5.png"
+dest_files=["res://.godot/imported/5.png-68329d2745cb2321de2fab2f176f9522.ctex"]
 
 [params]
 

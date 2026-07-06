@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1ove7xnckgwg"
-path="res://.godot/imported/3.png-e52e254191fec783e6d8267a304d483e.ctex"
+path="res://.godot/imported/3.png-1baff6675d1afbc0543b6db383c501f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/3.png"
-dest_files=["res://.godot/imported/3.png-e52e254191fec783e6d8267a304d483e.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/3.png"
+dest_files=["res://.godot/imported/3.png-1baff6675d1afbc0543b6db383c501f6.ctex"]
 
 [params]
 

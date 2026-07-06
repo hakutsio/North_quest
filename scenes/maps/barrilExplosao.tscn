@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b6rpfcar7dluj"]
+
+[ext_resource type="AudioStream" uid="uid://dmcgr7onu2112" path="res://assets/audio/music/explosaoBarril.mp3" id="1_n5uo3"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=518461490]
+stream = ExtResource("1_n5uo3")
+autoplay = true

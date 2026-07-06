@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s70fbf8h1h4x"
-path="res://.godot/imported/Interrogation In 02.png-cc8492668a3228f878b62d54f59d4bed.ctex"
+path="res://.godot/imported/Interrogation In 02.png-68f1046ef76630eab39e5300c3bf7616.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EPIC RPG World Pack - [FREE Demo]Ancient Ruins - Copia/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Dialogue/Interrogation/Interrogation In 02.png"
-dest_files=["res://.godot/imported/Interrogation In 02.png-cc8492668a3228f878b62d54f59d4bed.ctex"]
+source_file="res://EPIC RPG World Pack/TiledMap Editor/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Dialogue/Interrogation/Interrogation In 02.png"
+dest_files=["res://.godot/imported/Interrogation In 02.png-68f1046ef76630eab39e5300c3bf7616.ctex"]
 
 [params]
 

@@ -46,6 +46,7 @@ texture = ExtResource("2_7eta3")
 [node name="Result" type="Label" parent="VB" unique_id=254361751]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
+size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
@@ -56,21 +57,30 @@ text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Buttons" type="HBoxContainer" parent="VB" unique_id=2016265351]
-layout_mode = 2
+[node name="Buttons" type="HBoxContainer" parent="." unique_id=2016265351]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_constants/separation = 100
 alignment = 1
 
-[node name="Repetir" type="TextureButton" parent="VB/Buttons" unique_id=476917676]
+[node name="Repetir" type="TextureButton" parent="Buttons" unique_id=476917676]
 custom_minimum_size = Vector2(450, 150)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 8
 texture_normal = ExtResource("2_o0iis")
 texture_pressed = ExtResource("3_ylhj1")
 texture_hover = ExtResource("4_7eta3")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="VB/Buttons/Repetir" unique_id=1942267540]
+[node name="Label" type="Label" parent="Buttons/Repetir" unique_id=1942267540]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 1
 anchors_preset = 10
@@ -87,16 +97,17 @@ text = "Repetir"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MainMenu" type="TextureButton" parent="VB/Buttons" unique_id=794105211]
+[node name="MainMenu" type="TextureButton" parent="Buttons" unique_id=794105211]
 custom_minimum_size = Vector2(450, 150)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 8
 texture_normal = ExtResource("2_o0iis")
 texture_pressed = ExtResource("3_ylhj1")
 texture_hover = ExtResource("4_7eta3")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="VB/Buttons/MainMenu" unique_id=649742655]
+[node name="Label" type="Label" parent="Buttons/MainMenu" unique_id=649742655]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 1
 anchors_preset = 10
@@ -113,5 +124,5 @@ text = "Menu Principal"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="VB/Buttons/Repetir" to="." method="_on_repetir_pressed"]
-[connection signal="pressed" from="VB/Buttons/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Buttons/Repetir" to="." method="_on_repetir_pressed"]
+[connection signal="pressed" from="Buttons/MainMenu" to="." method="_on_main_menu_pressed"]
